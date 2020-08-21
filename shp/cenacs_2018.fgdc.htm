@@ -1,0 +1,3347 @@
+<HTML>
+<HEAD>
+<SCRIPT><!--
+
+      function fix(e) {
+        var par = e.parentNode;
+        e.id = "";
+        e.style.marginLeft = "0.42in";
+        var pos = e.innerText.indexOf("\n");
+        if (pos > 0) {
+          while (pos > 0) {
+            var t = e.childNodes(0);
+            var n = document.createElement("PRE");
+            var s = t.splitText(pos);
+            e.insertAdjacentElement("afterEnd", n);
+            n.appendChild(s);
+            n.style.marginLeft = "0.42in";
+            e = n;
+            pos = e.innerText.indexOf("\n");
+          }
+          var count = (par.children.length);
+          for (var i = 0; i < count; i++) {
+            e = par.children(i);
+            if (e.tagName == "PRE") {
+              pos = e.innerText.indexOf(">");
+              if (pos != 0) {
+                n = document.createElement("DD");
+                e.insertAdjacentElement("afterEnd", n);
+                n.innerText = e.innerText;
+                e.removeNode(true);
+              }
+            }
+          }
+          if (par.children.tags("PRE").length > 0) {
+            count = (par.children.length);
+            for (i = 0; i < count; i++) {
+              e = par.children(i);
+              if (e.tagName == "PRE") {
+                e.id = "";
+                if (i < (count-1)) {
+                  var e2 = par.children(i + 1);
+                  if (e2.tagName == "PRE") {
+                    e.insertAdjacentText("beforeEnd", e2.innerText+"\n");
+                    e2.removeNode(true);
+                    count = count-1;
+                    i = i-1;
+                  }
+                }
+              }
+            }
+          }
+        }
+        else {
+          n = document.createElement("DD");
+          par.appendChild(n);
+          n.innerText = e.innerText;
+          e.removeNode(true);
+        }
+      }
+
+    --></SCRIPT>
+</HEAD>
+<BODY oncontextmenu="return true">
+<A name="Top" />
+<H1>2015 CENSUS BLOCK GROUPS IN FLORIDA (WITH SELECTED FIELDS FROM THE 2014-2018 AMERICAN COMMUNITY SURVEY)</H1>
+<H2>Metadata:</H2>
+<UL>
+<LI><A HREF="#Identification_Information">Identification_Information</A></LI>
+<LI><A HREF="#Data_Quality_Information">Data_Quality_Information</A></LI>
+<LI><A HREF="#Spatial_Data_Organization_Information">Spatial_Data_Organization_Information</A></LI>
+<LI><A HREF="#Spatial_Reference_Information">Spatial_Reference_Information</A></LI>
+<LI><A HREF="#Entity_and_Attribute_Information">Entity_and_Attribute_Information</A></LI>
+<LI>
+<A HREF="#1">
+
+                  Distribution_Information
+                </A>
+</LI>
+<LI><A HREF="#Metadata_Reference_Information">Metadata_Reference_Information</A></LI>
+</UL>
+<A name="Identification_Information"><HR /></A>
+<DL>
+<DT><I>Identification_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Citation:</I></DT>
+<DD>
+<DL>
+<DT><I>Citation_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Originator:</I>
+U.S. Census Bureau</DT>
+<DT><I>Publication_Date:</I>
+201912</DT>
+<DT><I>Title:</I></DT>
+<DD>2015 CENSUS BLOCK GROUPS IN FLORIDA (WITH SELECTED FIELDS FROM THE 2014-2018 AMERICAN COMMUNITY SURVEY)</DD>
+<DT><I>Geospatial_Data_Presentation_Form:</I>
+vector digital data</DT>
+<DT><I>Publication_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Publication_Place:</I>
+Washington, DC</DT>
+<DT><I>Publisher:</I>
+U.S. Census Bureau</DT>
+</DL>
+</DD>
+<DT><I>Other_Citation_Details:</I></DT>
+<DD>State of Florida</DD>
+<DT><I>Online_Linkage:</I>
+<A TARGET="viewer" HREF="www.census.gov">
+www.census.gov</A>
+</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Description:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Abstract:</I></DT>
+<PRE ID="original">This dataset contains the US Census Bureau 2015 Census Block Groups for the State of Florida with selected fields from the 2014-2018 American Community Survey (ACS). Some of the fields included in this dataset are total population, education, and housing and economic characteristics. This data is at the block group level. In addition, fields have been added and calculated. 
+
+The ACS was designed to replace the long-form of the decennial census. The ACS is a survey that releases data annually. ACS data are survey estimates distributed for 1-, 3-, and 5-year time periods. The 5-year estimates are the only time period estimates that provide data at the block group level. This data is designed for use within the Florida Department of Transportation?s Efficient Transportation Decision Making Process (ETDM). However, the subset of ACS fields included herein is useful for a variety of applications and uses.  If you are looking for census block group data with the decennial census counts, please see the FGDL layer CENBLKGRP_2010.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Purpose:</I></DT>
+<PRE ID="original">For the research and analysis of the 2007-2011 American 
+Community Survey (ACS) at the Census Block Group 
+geography level. The data contains selected fields from the 
+2007-2011 ACS. Census Block Groups are geographic entities 
+made up of Census Blocks and that are contained within the 
+same Census Tract. Block Groups generally contain between 
+600 and 3,000 people, with an optimum size of 1,500 people.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Time_Period_of_Content:</I></DT>
+<DD>
+<DL>
+<DT><I>Time_Period_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Range_of_Dates/Times:</I></DT>
+<DD>
+<DL>
+<DT><I>Beginning_Date:</I>
+2014</DT>
+<DT><I>Ending_Date:</I>
+2018</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DIV>
+<DT><I>Currentness_Reference:</I></DT>
+<PRE ID="original">publication date</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Status:</I></DT>
+<DD>
+<DL>
+<DT><I>Progress:</I>
+Complete</DT>
+<DT><I>Maintenance_and_Update_Frequency:</I>
+As needed</DT>
+</DL>
+</DD>
+<DT><I>Spatial_Domain:</I></DT>
+<DD>
+<DL>
+<DT><I>Bounding_Coordinates:</I></DT>
+<DD>
+<DL>
+<DT><I>West_Bounding_Coordinate:</I>
+-87.429040</DT>
+<DT><I>East_Bounding_Coordinate:</I>
+-79.872251</DT>
+<DT><I>North_Bounding_Coordinate:</I>
+30.983191</DT>
+<DT><I>South_Bounding_Coordinate:</I>
+24.492815</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Keywords:</I></DT>
+<DD>
+<DL>
+<DT><I>Theme:</I></DT>
+<DD>
+<DL>
+<DT><I>Theme_Keyword:</I>
+population</DT>
+<DT><I>Theme_Keyword:</I>
+socioeconomic</DT>
+<DT><I>Theme_Keyword:</I>
+economic</DT>
+<DT><I>Theme_Keyword:</I>
+housing</DT>
+<DT><I>Theme_Keyword:</I>
+education</DT>
+</DL>
+</DD>
+<DT><I>Theme:</I></DT>
+<DD>
+<DL>
+<DT><I>Theme_Keyword_Thesaurus:</I>
+ISO 19115 Topic Category</DT>
+<DT><I>Theme_Keyword:</I>
+society</DT>
+<DT><I>Theme_Keyword:</I>
+boundaries</DT>
+</DL>
+</DD>
+<DT><I>Place:</I></DT>
+<DD>
+<DL>
+<DT><I>Place_Keyword:</I>
+Florida</DT>
+<DT><I>Place_Keyword:</I>
+block group</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Access_Constraints:</I>
+NONE</DT>
+<DIV>
+<DT><I>Use_Constraints:</I></DT>
+<PRE ID="original">NONE</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Point_of_Contact:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization_Primary:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization:</I>
+U.S. Census Bureau</DT>
+</DL>
+</DD>
+<DT><I>Contact_Address:</I></DT>
+<DD>
+<DL>
+<DT><I>Address_Type:</I>
+mailing and physical address</DT>
+<DT><I>City:</I>
+4600 Silver Hill Road, Stop 7400</DT>
+<DT><I>State_or_Province:</I>
+Washington, D.C.</DT>
+<DT><I>Postal_Code:</I>
+20233-7400</DT>
+<DT><I>Country:</I>
+United States</DT>
+</DL>
+</DD>
+<DT><I>Contact_Voice_Telephone:</I>
+(301) 763-4039</DT>
+<DT><I>Contact_Facsimile_Telephone:</I>
+(301) 763-4348</DT>
+<DT><I>Contact Instructions:</I></DT>
+<DIV>
+<PRE ID="original">http://www.census.gov/</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Native_Data_Set_Environment:</I></DT>
+<DD>Microsoft Windows Vista Version 6.1 (Build 7601) Service Pack 1; ESRI ArcCatalog 9.3.1.4000</DD>
+<DT><I>Cross_Reference:</I></DT>
+<DD>
+<DL>
+<DT><I>Citation_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Other_Citation_Details:</I></DT>
+<DD>2012-2016 ACS Summary File Tech Document: 
+https://www2.census.gov/programs-surveys/acs/summary_file/2016/documentation/tech_docs/2016_SummaryFile_Tech_Doc.pdf</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A name="Data_Quality_Information"><HR /></A>
+<DL>
+<DT><I>Data_Quality_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Accuracy:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Attribute_Accuracy_Report:</I></DT>
+<PRE ID="original">GeoPlan relied on the integrity of the attribute information within
+the original data.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DIV>
+<DT><I>Logical_Consistency_Report:</I></DT>
+<PRE ID="original">This data is provided 'as is'. GeoPlan relied on the integrity
+of the original data layer's topology</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Completeness_Report:</I></DT>
+<PRE ID="original">This data is provided 'as is' by GeoPlan and is complete to our
+knowledge.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Positional_Accuracy:</I></DT>
+<DD>
+<DL>
+<DT><I>Horizontal_Positional_Accuracy:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Horizontal_Positional_Accuracy_Report:</I></DT>
+<PRE ID="original">This data is provided 'as is' and its horizontal positional accuracy
+has not been verified by GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Vertical_Positional_Accuracy:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Vertical_Positional_Accuracy_Report:</I></DT>
+<PRE ID="original">This data is provided 'as is' and its vertical positional accuracy
+has not been verified by GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Lineage:</I></DT>
+<DD>
+<DL>
+<DT><I>Source_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Source_Scale_Denominator:</I>
+100000</DT>
+<DT><I>Source_Citation_Abbreviation:</I></DT>
+<DD>U.S. Census Bureau</DD>
+<DIV>
+<DT><I>Source_Contribution:</I></DT>
+<PRE ID="original">Spatial and Attribute Information</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Process_Step:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Process_Description:</I></DT>
+<PRE ID="original">The 2015 TIGER line files were downloaded from the following site:
+https://www.census.gov/geo/maps-data/data/tiger-geodatabases.html
+date downloaded 12/13/16
+
+The data was projected to Albers HPGN.
+
+
+The American Community Survey data was downloaded 
+from the Census Bureau in .csv format from:
+https://www2.census.gov/programs-surveys/acs/summary_file/2017/data/5_year_by_state/
+date downloaded: 1/8/20
+
+Changed name from tlgdb_2015_a_12_fl_931.gdb\Block_Group to CENACS_2018
+ 
+A variety of GIS techniques including python scripting were used to parse, 
+aggregate, and join the tabular demographic data to the spatial data. The result is a 
+feature class with logically named fields that are made up of one or more census 
+fields.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Source_Used_Citation_Abbreviation:</I></DT>
+<DD>GeoPlan</DD>
+<DT><I>Process_Date:</I>
+20200128</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A name="Spatial_Data_Organization_Information"><HR /></A>
+<DL>
+<DT><I>Spatial_Data_Organization_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Direct_Spatial_Reference_Method:</I>
+Vector</DT>
+<DT><I>Point_and_Vector_Object_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>SDTS_Terms_Description:</I></DT>
+<DD>
+<DL>
+<DT><I>SDTS_Point_and_Vector_Object_Type:</I>
+G-polygon</DT>
+<DT><I>Point_and_Vector_Object_Count:</I>
+11442</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A name="Spatial_Reference_Information"><HR /></A>
+<DL>
+<DT><I>Spatial_Reference_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Horizontal_Coordinate_System_Definition:</I></DT>
+<DD>
+<DL>
+<DT><I>Planar:</I></DT>
+<DD>
+<DL>
+<DT><I>Map_Projection:</I></DT>
+<DD>
+<DL>
+<DT><I>Map_Projection_Name:</I>
+Albers Conical Equal Area</DT>
+<DT><I>Albers_Conical_Equal_Area:</I></DT>
+<DD>
+<DL>
+<DT><I>Standard_Parallel:</I>
+24.000000</DT>
+<DT><I>Standard_Parallel:</I>
+31.500000</DT>
+<DT><I>Longitude_of_Central_Meridian:</I>
+-84.000000</DT>
+<DT><I>Latitude_of_Projection_Origin:</I>
+24.000000</DT>
+<DT><I>False_Easting:</I>
+400000.000000</DT>
+<DT><I>False_Northing:</I>
+0.000000</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Planar_Coordinate_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Planar_Coordinate_Encoding_Method:</I>
+coordinate pair</DT>
+<DT><I>Coordinate_Representation:</I></DT>
+<DD>
+<DL>
+<DT><I>Abscissa_Resolution:</I>
+0.002048</DT>
+<DT><I>Ordinate_Resolution:</I>
+0.002048</DT>
+</DL>
+</DD>
+<DT><I>Planar_Distance_Units:</I>
+meters</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Geodetic_Model:</I></DT>
+<DD>
+<DL>
+<DT><I>Horizontal_Datum_Name:</I>
+D_North_American_1983_HARN</DT>
+<DT><I>Ellipsoid_Name:</I>
+Geodetic Reference System 80</DT>
+<DT><I>Semi-major_Axis:</I>
+6378137.000000</DT>
+<DT><I>Denominator_of_Flattening_Ratio:</I>
+298.257222</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Vertical_Coordinate_System_Definition:</I></DT>
+<DD>
+<DL>
+<DT><I>Altitude_System_Definition:</I></DT>
+<DD>
+<DL>
+<DT><I>Altitude_Resolution:</I>
+0.000100</DT>
+<DT><I>Altitude_Encoding_Method:</I>
+Explicit elevation coordinate included with horizontal coordinates</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A name="Entity_and_Attribute_Information"><HR /></A>
+<DL>
+<DT><I>Entity_and_Attribute_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Detailed_Description:</I></DT>
+<DD>
+<DL>
+<DT><I>Entity_Type:</I></DT>
+<DD>
+<DL>
+<DT><I>Entity_Type_Label:</I>
+CENACS_2018</DT>
+<DT><I>Entity_Type_Definition:</I></DT>
+<DD>CENACS_2018.DBF</DD>
+<DT><I>Entity_Type_Definition_Source:</I></DT>
+<DD>U.S. Census Bureau</DD>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+FID</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Internal feature number.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">Esri</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Attribute_Domain_Values:</I></DT>
+<DD>
+<DL>
+<DT><I>Unrepresentable_Domain:</I></DT>
+<DD>Sequential unique whole numbers that are automatically generated.</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+SHAPE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Feature geometry.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">ESRI</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Attribute_Domain_Values:</I></DT>
+<DD>
+<DL>
+<DT><I>Unrepresentable_Domain:</I></DT>
+<DD>Coordinates defining the features.</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+STATEFP10</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">2010 Census state Federal Information Processing Standards</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+COUNTYFP10</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">2010 Census county Federal Information Processing Standards</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TRACTCE10</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">2010 Census census tract code</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+BLKGRPCE10</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">2010 Census block group number</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+NAMELSAD</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">2015 Census translated legal/statistical area description and the block group number</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ALAND</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">2015 Census land area (square meters)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AWATER</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">2015 Census water area (square meters)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+INTPTLAT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">2015 Census latitude of the internal point</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+INTPTLON</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">2015 Census longitude of the internal point</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+GEOID10</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Block identifier; a concatenation of 2010 Census state Federal Information Processing Standards (FIPS) code, county FIPS code, census tract code, census block group code</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LOGRECNO</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Unique ID used to join ACS 2012-2016 data to proper Block Group</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ACRES</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Acres</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+SHAPE_Area</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Area of feature in internal units squared.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">ESRI</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Attribute_Domain_Values:</I></DT>
+<DD>
+<DL>
+<DT><I>Unrepresentable_Domain:</I></DT>
+<DD>Positive real numbers that are automatically generated.</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TOTALPOP</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Total Population - [B01003_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HOUSEHOLDS</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Total: Households - [B11001_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MALE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Male  - [B01001_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+FEMALE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Female - [B01001_026]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+WHITE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population White alone - [B02001_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+BLACK</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Black or African American alone - [B02001_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AMERI_ES</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population American Indian and Alaska Native alone - [B02001_004]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ASIAN</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Asian alone - [B02001_005]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HAWN_PI</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Native Hawaiian and Other Pacific Islander alone - [B02001_006]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+OTHER</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Some other race alone - [B02001_007]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MULT_RACE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Two or more races - [B02001_008]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HISPANIC</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Hispanic or Latino by Race - [B03002_012]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+WHITE_NH</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Not Hispanic or Latino:White alone - [B03002_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AVE_HH_SZ</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Average household size Total: Average Household Size of Occupied Housing Units by Tenure - [B25010_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PH_TOTAL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Total: Household Type by Relatives and Nonrelatives for Population in Households - [B11002_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PH_FAM</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population in family households - [B11002_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PH_NONFAM</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population in nonfamily households - [B11002_012]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+FAM_HH</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Family households - [B11001_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AVE_FAM_SZ</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Average family size (Total Population In family households/Family households)  - [PH_FAM]/[FAM_HH]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_UNDER5</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Under 5 years     - [B01001_003] + [B01001_027]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_5_17</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 5 to 17 years      - [B01001_004] + [B01001_028] + [B01001_005] + [B01001_029] + [B01001_006] + [B01001_030]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_18_21</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 18 to 21 years   - [B01001_007] + [B01001_031] + [B01001_008] + [B01001_032] + [B01001_009] + [B01001_033]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_22_29</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 22 to 29 years    - [B01001_010] + [B01001_034] + [B01001_011] + [B01001_035]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_30_39</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 30 to 39 years    - [B01001_012] + [B01001_036] + [B01001_013] + [B01001_037]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_40_49</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 40 to 49 years    - [B01001_014] + [B01001_038] + [B01001_015] + [B01001_039]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_50_64</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 50 to 64 years    - [B01001_016] + [B01001_040] + [B01001_017] + [B01001_041] + [B01001_018] + [B01001_042] + [B01001_019] + [B01001_043]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_65_UP</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 65 and up   - [B01001_020] + [B01001_044] + [B01001_021] + [B01001_045] + [B01001_022] + [B01001_046] + [B01001_023] + [B01001_047] + [B01001_024] + [B01001_048] + [B01001_025] + [B01001_049]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_65_74</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 65 to 74 years   - [B01001_020] + [B01001_044] + [B01001_021] + [B01001_045] + [B01001_022] + [B01001_046]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_75_84</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 75 to 84 years    - [B01001_023] + [B01001_047] + [B01001_024] + [B01001_048]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AGE_85_UP</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 85 years and over - [B01001_025] + [B01001_049]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MED_AGE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Median age for population - [B01002_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HABVBELOW</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Households Total: households for poverty status in the past 12 months by household type by age of householder - [B17017_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HBELOW_POV</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Households with income in the past 12 months below poverty level - [B17017_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HABOVE_POV</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Households with income in the past 12 months at or above poverty level - [B17017_031]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ABVE_BELW</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Total: Poverty Status of Individuals in the Past 12 Months by Living Arrangement - [B17021_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ABOVE_POV</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population with income in the past 12 months at or above poverty level - [B17021_019]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+BELOW_POV</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population with income in the past 12 months below poverty level - [B17021_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ED_TOTAL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population Total: Sex by Educational Attainment for the Population 25 Years and over  - [B15002_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ED_LESS9TH</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Educational Attainment for the Population 25 Years and over No schooling completed, Nursery to 4th grade, 5th and 6th grade, 7th and 8th grade  - [B15002_003] + [B15002_020] + [B15002_004] + [B15002_021] + [B15002_005] + [B15002_022] + [B15002_006] + [B15002_023]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ED_12NODIP</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Educational Attainment for the Population 25 Years and over 9th grade, 10th grade, 11th grade, 12th grade, no diploma - [B15002_007] + [B15002_024] + [B15002_008] + [B15002_025] + [B15002_009] + [B15002_026] + [B15002_010] + [B15002_027]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HSGRAD</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Educational Attainment for the Population 25 Years and over High school graduate, GED (includes equivalency) - [B15002_011] + [B15002_028] + [B15002_012] + [B15002_029] + [B15002_013] + [B15002_030] + [B15002_014] + [B15002_031] + [B15002_015] + [B15002_032] + [B15002_016] + [B15002_033] + [B15002_017] + [B15002_034] + [B15002_018] + [B15002_035]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ED_SOMECOL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Educational Attainment for the Population 25 Years and over Some college - less than 1 year, Some college - 1 or more years no degree, Associate's degree - [B15002_012] + [B15002_029] + [B15002_013] + [B15002_030] + [B15002_014] + [B15002_031]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ED_COLLEGE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Educational Attainment for the Population 25 Years and over Bachelor's degree, Master's degree, Professional school degree, Doctorate degree - [B15002_015] + [B15002_032] + [B15002_016] + [B15002_033] + [B15002_017] + [B15002_034] + [B15002_018] + [B15002_035]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+BACHELORS</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Educational Attainment for the Population 25 Years and over Bachelor's degree only - [B15002_015] + [B15002_032]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HSE_UNITS</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Total Housing Units  - [B25001_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HS_PER_AC</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing units per acre - [HSE_UNITS]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+VACANT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Total Vacant housing units - [B25004_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TRAN_TOTAL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Means of Transportation to Work Total, workers 16 years and over - [B08301_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TRAN_CAR</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Means of Transportation to Work Car, truck, or van - [B08301_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TRAN_MOTO</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Means of Transportation to Work Motorcycle - [B08301_017]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TRAN_BIKE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Means of Transportation to Work Bicycle - [B08301_018]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TRAN_PUB</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Means of Transportation to Work Public transportation (excluding taxicab) - [B08301_010]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TRAN_WALK</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Means of Transportation to Work Walked - [B08301_019]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TRAN_OTHER</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Means of Transportation to Work Other means - [B08301_020]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TRAN_HOME</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Means of Transportation to Work Worked at home - [B08301_021]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ENROLLED</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 3 Years And Over Enrolled In School - [B14002_003] + [B14002_027]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+NOT_ENROLD</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 3 Years And Over Not enrolled in school - [B14002_025] + [B14002_049]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LESS_10K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months Less than $10,000 (in 2018 Inflation-Adjusted Dollars) - [B19001_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I10K_14K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $10,000 to $14,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I15K_19K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $15,000 to $19,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_004]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I20K_24K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $20,000 to $24,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_005]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I25K_29K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $25,000 to $29,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_006]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I30K_34K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $30,000 to $34,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_007]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I35K_39K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $35,000 to $39,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_008]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I40K_44K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $40,000 to $44,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_009]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I45K_49K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $45,000 to $49,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_010]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I50K_59K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $50,000 to $59,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_011]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I60K_74K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $60,000 to $74,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_012]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I75K_99K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $75,000 to $99,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_013]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I100K_124K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $100,000 to $124,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_014]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I125K_149K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $125,000 to $149,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_015]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I150K_199K</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $150,000 to $199,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_016]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+I200KMORE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Number of Households with Household Income in The Past 12 Months $200,000 or more (in 2018 Inflation-Adjusted Dollars) - [B19001_017]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MEDHHINC</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Median household income in the past 12 months (in 2018 inflation-adjusted dollars) - [B19013_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MEDFINCOME</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Median family income in the past 12 months (in 2018 inflation-adjusted dollars) - [B19113_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HH_NOPUBA</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Households with No public assistance income - [B19057_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HH_PUBA</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Households with public assistance income - [B19057_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MEDOOHVAL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Median value (dollars) Owner-occupied housing units - [B25077_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+H1ATTACH</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units in Structure 1, attached - [B25024_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+H1DETACH</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units in Structure 1, detached - [B25024_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+H2UNIT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units in Structure 2 - [B25024_004]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+H3_4UNIT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units in Structure 3 or 4 - [B25024_005]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+H5_9UNIT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units in Structure 5 to 9 - [B25024_006]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+H10_19UNIT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units in Structure 10 to 19 - [B25024_007]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+H20_49UNIT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units in Structure 20 to 49 - [B25024_008]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+H50MORE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units in Structure 50 or more - [B25024_009]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MOBILE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units in Structure Mobile home - [B25024_010]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+OTHERHOUSE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units in Structure Boat, RV, van, etc. - [B25024_011]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+H_SF</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Single Family  - [H1ATTACH]+ [H1DETACH]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+H_MF</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Mulit Family - [H2UNIT] + [H3_4UNIT] + [H5_9UNIT] + [H10_19UNIT] + [H20_49UNIT] + [H50MORE]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+OWNER</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Owner occupied housing units - [B25038_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+RENTER</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Renter occupied housing units - [B25038_009]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+OWN_17</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Owner occupied housing units Moved in 2017 or later - [B25038_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+RENT_17</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Renter occupied housing units Moved in 2017 or later - [B25038_010]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+B14</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units Built 2014 or later - [B25034_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+B10_13</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units Built 2010 to 2013 - [B25034_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+B00_09</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units Built 2000 to 2009 - [B25034_004]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+B90_99</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units Built 1990 to 1999 - [B25034_005]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+B80_89</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units Built 1980 to 1989 - [B25034_006]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+B70_79</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units Built 1970 to 1979 - [B25034_007]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+B60_69</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units Built 1960 to 1969 - [B25034_008]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+B50_59</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units Built 1950 to 1959 - [B25034_009]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+B40_49</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units Built 1940 to 1949 - [B25034_010]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+BEFORE39</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Housing Units Built 1939 or earlier - [B25034_011]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+M17</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied housing units moved in 2017 or later - [B25038_003] + [B25038_010]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+M15_16</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied housing units Moved in 2015 to 2016 - [B25038_004] + [B25038_011]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+M10_14</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied housing units Moved in 2010 to 2014 - [B25038_005] + [B25038_012]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+M00_09</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied housing units Moved in 2000 to 2009 - [B25038_006] + [B25038_013]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+M90_99</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied housing units Moved in 1990 to 1999 - [B25038_007] + [B25038_014]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+M89BEFORE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied housing units Moved in 1989 or earlier - [B25038_008] + [B25038_015]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MO_17</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Owner Occupied housing units moved in 2017 or later - [B25038_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MO_15_16</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Owner Occupied housing units Moved in 2015 to 2016 - [B25038_004]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MO_10_14</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Owner Occupied housing units Moved in 2010 to 2014 - [B25038_005]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MO_00_09</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Owner Occupied housing units Moved in 2000 to 2009 - [B25038_006]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MO_90_99</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Owner Occupied housing units Moved in 1990 to 1999 - [B25038_007]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MO89BEFORE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Owner Occupied housing units Moved in 1989 or earlier - [B25038_008]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MR_17</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Renter Occupied housing units moved in 2017 or later - [B25038_010]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MR_15_16</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Renter Occupied housing units Moved in 2015 to 2016 - [B25038_011]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MR_10_14</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Renter Occupied housing units Moved in 2010 to 2014 - [B25038_012]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MR_00_09</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Renter Occupied housing units Moved in 2000 to 2009 - [B25038_013]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MR_90_99</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Renter Occupied housing units Moved in 1990 to 1999 - [B25038_014]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MR89BEFORE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Renter Occupied housing units Moved in 1989 or earlier - [B25038_015]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MYTOTAL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Median year householder moved into unit - Occupied Housing Units Total - [B25039_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MYOWNER</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Median year householder moved into unit - Occupied Housing Units Owner - [B25039_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MYRENTER</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Median year householder moved into unit - Occupied Housing Units Renter - [B25039_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+VEHICLE_0</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied Housing Units with No vehicle available - [B25044_003] + [B25044_010]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+VEHICLE_1</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied Housing Units with 1 vehicle available - [B25044_004] + [B25044_011]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+VEHICLE_2</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied Housing Units with 2 vehicles available - [B25044_005] + [B25044_012]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+VEHICLE_3</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied Housing Units with 3 vehicles available  - [B25044_006] + [B25044_013]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+VEHICLE_4</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied Housing Units with 4 vehicles available - [B25044_007] + [B25044_014]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+VEHICLE5G</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Occupied Housing Units with 5 or more vehicles available - [B25044_008] + [B25044_015]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+S_TOTAL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ability to Speak English for the Population 5+ Yrs Total - [B16004_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+S_VERYWELL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ability to Speak English for the Population 5+ Yrs Speak English 'very well' - [B16004_005] + [B16004_010] + [B16004_015] + [B16004_020] + [B16004_027] + [B16004_032] + [B16004_037] + [B16004_042] + [B16004_049] + [B16004_054] + [B16004_059] + [B16004_064]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+S_WELL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ability to Speak English for the Population 5+ Yrs Speak English 'well' - [B16004_006] + [B16004_011] + [B16004_016] + [B16004_021] + [B16004_028] + [B16004_033] + [B16004_038] + [B16004_043] + [B16004_050] + [B16004_055] + [B16004_060] + [B16004_065]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+S_NOTWELL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ability to Speak English for the Population 5+ Yrs Speak English 'not well' - [B16004_007] + [B16004_012] + [B16004_017] + [B16004_022] + [B16004_029] + [B16004_034] + [B16004_039] + [B16004_044] + [B16004_051] + [B16004_056] + [B16004_061] + [B16004_066]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+S_NOTATALL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ability to Speak English for the Population 5+ Yrs Speak English 'not at all' - [B16004_008] + [B16004_013] + [B16004_018] + [B16004_023] + [B16004_030] + [B16004_035] + [B16004_040] + [B16004_045] + [B16004_052] + [B16004_057] + [B16004_062] + [B16004_067]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+S_ENGLISH</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ability to Speak English for the Population 5+ Yrs Speak only English - [B16004_003] + [B16004_025] + [B16004_047]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+S_SPANISH</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ability to Speak English for the Population 5+ Yrs Speak Spanish - [B16004_004] + [B16004_026] + [B16004_048]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+S_EUROPE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ability to Speak English for the Population 5+ Yrs Speak other Indo-European languages - [B16004_009] + [B16004_031] + [B16004_053]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+S_ASIAN</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ability to Speak English for the Population 5+ Yrs Speak Asian and Pacific Island languages - [B16004_014] + [B16004_036] + [B16004_058]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+S_OTHER</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ability to Speak English for the Population 5+ Yrs Speak other languages - [B16004_019] + [B16004_041] + [B16004_063]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HL_TOTAL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Total Households by Household Language by Household Limited English Speaking Status  - [C16002_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HL_ENGLISH</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Households that speak English. This includes households that are English only, or that speak other languages but are not a limited English speaking household. - [C16002_002] + [C16002_005]+ [C16002_008]+ [C16002_011]+ [C16002_014]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HL_SPAN_L</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Households that speak Spanish: Limited English speaking household - [C16002_004]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HL_EURO_L</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Households that speak Other Indo-European languages: Limited English speaking household - [C16002_007]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HL_ASIAN_L</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Households that speak Asian and Pacific Island languages: Limited English speaking household - [C16002_010]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+HL_OTHER_L</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Households that speak Other languages: Limited English speaking household - [C16002_013]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LABOR_CIV</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Civilian Employed Population 16 Years And Over Total - [C24010_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+RTOTAL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ratio of Income to Poverty Level in the Past 12 Months. Total population for whom Poverty Status is Determined - [C17002_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+RU50</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ratio of Income to Poverty Level in the Past 12 Months Under .50 - [C17002_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+R50_99</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ratio of Income to Poverty Level in the Past 12 Months .50 to .99 - [C17002_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+R1_124</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ratio of Income to Poverty Level in the Past 12 Months 1.00 to 1.24 - [C17002_004]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+R125ABV</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ratio of Income to Poverty Level in the Past 12 Months 1.25 and over - [C17002_005] + [C17002_006] + [C17002_007] + [C17002_008]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+RU1</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Ratio of Income to Poverty Level in the Past 12 Months under 1 - [RU50] + [R50_99]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DIS_TOTAL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population by Poverty Status in the Past 12 Months by Disability Status by Employment Status for the Population 20 to 64 Years Total - [B23024_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DIS_2064</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 20 to 64 Years with Income in the past 12 months below and above poverty level with a disability - [B23024_003] + [B23024_018]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+NO_DIS2064</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population 20 to 64 Years with Income in the past 12 months below and above poverty level with No disability - [B23024_010] + [B23024_025]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+GMTOT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Geographical Mobility in the Past Year for Current Residence Population 1 Year And Over Living in and out of Metropolitan Statistical Areas or Micropolitan Statistical Areas In The United States: Total - [B07201_001] + [B07202_001] + [B07203_001]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+GMSAME</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Geographical Mobility in the Past Year for Current Residence Population 1 Year And Over Living in and out of Metropolitan Statistical Areas or Micropolitan Statistical Areas In The United States: Same house 1 year ago - [B07201_002] + [B07202_002] + [B07203_002]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+GMDIFF</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Geographical Mobility in the Past Year for Current Residence Population 1 Year And Over Living in and out of Metropolitan Statistical Areas or Micropolitan Statistical Areas In The United States: Different house in United States 1 year ago - [B07201_003] + [B07202_003] + [B07203_003]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+GMABROAD</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Geographical Mobility in the Past Year for Current Residence Population 1 Year And Over Living in and out of Metropolitan Statistical Areas or Micropolitan Statistical Areas In The United States: Abroad 1 year ago - [B07201_014] + [B07202_014] + [B07203_011]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_NOTWEL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent Ability to Speak English for the Population 5+ Yrs Speak English 'not well' - ([S_NOTWELL]/[S_TOTAL] * 100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_NOTATA</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent Ability to Speak English for the Population 5+ Yrs Speak English 'not at all' - ([S_NOTATALL]/[S_TOTAL] * 100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_NOTWEL</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Ability to Speak English for the Population 5+ Yrs Speak English 'not well' - [S_NOTWELL]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_NOTATA</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Ability to Speak English for the Population 5+ Yrs Speak English 'not at all' - [S_NOTATALL]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_BACHLR</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent Educational Attainment for the Population 25 Years and over Bachelor's degree only - ([BACHELORS]/[TOTALPOP] * 100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_POV</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent Population with income in the past 12 months below poverty level - ([BELOW_POV]/[ABVE_BELW] * 100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_RU50</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent Ratio of Income to Poverty Level in the Past 12 Months Under .50 - ([RU50]/[RTOTAL] * 100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_R50_9</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">RPercent atio of Income to Poverty Level in the Past 12 Months .50 to .99 - ([R50_99]/[RTOTAL] * 100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_R125AB</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent Ratio of Income to Poverty Level in the Past 12 Months 1.25 and over - ([R125ABV]/[RTOTAL] * 100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_RU1</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent Ratio of Income to Poverty Level in the Past 12 Months under 1 - ([RU1]/[RTOTAL] * 100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_POP</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Population per acre - [TOTALPOP]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MINORITY</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">"Minority Population" is the population that lists their racial status as a race other than white alone and-or lists their ethnicity as Hispanic or Latino. That is, all people other than non-Hispanic white-alone individuals. The word "alone" in this case indicates that the person is of a single race, not multiracial - [TOTALPOP] - [WHITE_NH]  - [TOTALPOP] - [WHITE_NH]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_WHITE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Persons White alone - [WHITE]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_BLACK</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Persons Black or African American alone - [BLACK]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_AMERI</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Persons American Indian and Alaska Native alone - [AMERI_ES]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_ASIAN</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Persons Asian alone - [ASIAN]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_HAWN</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Persons Native Hawaiian and Other Pacific Islander alone - [HAWN_PI]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_OTHER</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Persons Some other race alone - [OTHER]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_MULTI</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Persons Two or more races - [MULT_RACE]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_HISP</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Persons Hispanic or Latino - [HISPANIC]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DEN_DIS20</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Density per acre of Population 20 To 64 Years With a disability - [DIS_2064]/[ACRES]</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_WHITE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent of Persons White alone - ([WHITE] /[TOTALPOP] *100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_BLACK</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent of Persons Black or African American alone - ([BLACK] /[TOTALPOP] *100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_AMERI</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent of Persons American Indian and Alaska Native alone - ([AMERI_ES] /[TOTALPOP] *100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_ASIAN</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent of Persons Asian alone - ([ASIAN] /[TOTALPOP] *100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_HAWN</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent of Persons Native Hawaiian and Other Pacific Islander alone - ([HAWN_PI] /[TOTALPOP] *100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_OTHER</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent of Persons Some other race alone - ([OTHER] /[TOTALPOP] *100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_MULTI</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent of Persons Two or more races - ([MULT_RACE] /[TOTALPOP] *100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_HISP</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent of Persons Hispanic or Latino - ([HISPANIC] /[TOTALPOP] *100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+PCT_DIS20</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Percent Population 20 To 64 Years With a disability - ([DIS_2064]/[DIS_TOTAL] * 100)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DESCRIPT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">GeoPlan added field based on GEOID10</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+FGDLAQDATE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Date ACS data was downloaded from U.S. Census Bureau</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TIGERYEAR</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Source date for Tiger data (spatial portion of this layer)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AUTOID</DT>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DATAYEAR</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Source Date of ACS data</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+SHAPE_LEN</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A NAME="1">
+<HR />
+</A>
+<DL>
+<DT><I>Distribution_Information:</I>
+</DT>
+<DD>
+<DL>
+<DT><I>Distributor:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization_Primary:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization:</I>
+Florida Geographic Data Library (FGDL)</DT>
+<DT><I>Contact_Person:</I>
+</DT>
+</DL>
+</DD>
+<DT><I>Contact_Position:</I>
+</DT>
+<DT><I>Contact_Address:</I></DT>
+<DD>
+<DL>
+<DT><I>Address_Type:</I>
+mailing address</DT>
+<DIV>
+<DT><I>Address:</I></DT>
+<PRE ID="original">431 Architecture PO Box 115706</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>City:</I>
+Gainesville</DT>
+<DT><I>State_or_Province:</I>
+Florida</DT>
+<DT><I>Postal_Code:</I>
+32611-5706</DT>
+<DT><I>Country:</I>
+United States</DT>
+</DL>
+</DD>
+<DT><I>Contact_Voice_Telephone:</I>
+</DT>
+<DT><I>Contact_TDD/TTY_Telephone:</I>
+</DT>
+<DT><I>Contact_Facsimile_Telephone:</I>
+</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+Web site: http://www.fgdl.org</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+Technical Support: http://www.fgdl.org/fgdlfeed.html</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+For FGDL Software: http://www.fgdl.org/software.html</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+FGDL Frequently Asked Questions: http://www.fgdl.org/fgdlfaq.html</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+Mailing list for FGDL: http://www.fgdl.org/fgdl-l.html</DT>
+<DT><I>Hours_of_Service:</I>
+</DT>
+<DT><I>Contact Instructions:</I></DT>
+<DIV>
+<PRE ID="original"></PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Resource_Description:</I>
+DOWNLOADABLE DATA</DT>
+<DIV>
+<DT><I>Distribution_Liability:</I></DT>
+<PRE ID="original">The Florida Geographic Data Library is a collection of Geospatial Data
+compiled by the University of Florida GeoPlan Center with support from
+the Florida Department of Transportation. GIS data available in FGDL is
+collected from various state, federal, and other agencies (data sources)
+who are data stewards, producers, or publishers. The data available in
+FGDL may not be the most current version of the data offered by the
+data source. University of Florida GeoPlan Center makes no guarantees
+about the currentness of the data and suggests that data users check
+with the data source to see if more recent versions of the data exist.
+
+Furthermore, the GIS data available in the FGDL are provided 'as is'.
+The University of Florida GeoPlan Center makes no warranties, guaranties
+or representations as to the truth, accuracy or completeness of the data
+provided by the data sources. The University of Florida GeoPlan Center
+makes no representations or warranties about the quality or suitability
+of the materials, either expressly or implied, including but not limited
+to any implied warranties of merchantability, fitness for a particular
+purpose, or non-infringement. The University of Florida GeoPlan Center
+shall not be liable for any damages suffered as a result of using,
+modifying, contributing or distributing the materials.
+
+A note about data scale: 
+
+Scale is an important factor in data usage.  Certain scale datasets
+are not suitable for some project, analysis, or modeling purposes.
+Please be sure you are using the best available data. 
+
+1:24000 scale datasets are recommended for projects that are at the
+county level.
+1:24000 data should NOT be used for high accuracy base mapping such
+as property parcel boundaries.
+1:100000 scale datasets are recommended for projects that are at the
+multi-county or regional level.
+1:125000 scale datasets are recommended for projects that are at the
+regional or state level or larger.
+
+Vector datasets with no defined scale or accuracy should be
+considered suspect. Make sure you are familiar with your data
+before using it for projects or analysis. Every effort has been
+made to supply the user with data documentation. For additional
+information, see the References section and the Data Source Contact
+section of this documentation. For more information regarding
+scale and accuracy, see our webpage at:
+http://geoplan.ufl.edu/education.html</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Standard_Order_Process:</I></DT>
+<DD>
+<DL>
+<DT><I>Digital_Form:</I></DT>
+<DD>
+<DL>
+<DT><I>Digital_Transfer_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Transfer_Size:</I>
+31.729</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Technical_Prerequisites:</I></DT>
+<DD>This data is intended for use with a Geographic Information Systems or Remote Sensing software package.</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A name="Metadata_Reference_Information"><HR /></A>
+<DL>
+<DT><I>Metadata_Reference_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Metadata_Date:</I>
+20200128</DT>
+<DT><I>Metadata_Contact:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization_Primary:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization:</I>
+U.S. Department of Commerce, U.S. Census Bureau, Geography Division, Geographic Products Branch</DT>
+<DT><I>Contact_Person:</I>
+REQUIRED: The person responsible for the metadata information.</DT>
+</DL>
+</DD>
+<DT><I>Contact_Address:</I></DT>
+<DD>
+<DL>
+<DT><I>Address_Type:</I>
+mailing address</DT>
+<DIV>
+<DT><I>Address:</I></DT>
+<PRE ID="original">4600 Silver Hill Road, Stop 7400</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>City:</I>
+Washington</DT>
+<DT><I>State_or_Province:</I>
+D.C.</DT>
+<DT><I>Postal_Code:</I>
+20233-7400</DT>
+<DT><I>Country:</I>
+United States</DT>
+</DL>
+</DD>
+<DT><I>Contact_Voice_Telephone:</I>
+301-763-1128</DT>
+<DT><I>Contact_Facsimile_Telephone:</I>
+301-763-4710</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+geo.tiger@census.gov</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Metadata_Standard_Name:</I>
+FGDC Content Standards for Digital Geospatial Metadata</DT>
+<DT><I>Metadata_Standard_Version:</I>
+FGDC-STD-001-1998</DT>
+<DT><I>Metadata_Time_Convention:</I>
+local time</DT>
+<DT><I>Metadata_Extensions:</I></DT>
+<DD>
+<DL>
+<DT><I>Online_Linkage:</I>
+<A TARGET="viewer" HREF="http://www.esri.com/metadata/esriprof80.html">
+http://www.esri.com/metadata/esriprof80.html</A>
+</DT>
+<DT><I>Profile_Name:</I>
+ESRI Metadata Profile</DT>
+</DL>
+</DD>
+<DT><I>Metadata_Extensions:</I></DT>
+<DD>
+<DL>
+<DT><I>Online_Linkage:</I>
+<A TARGET="viewer" HREF="http://www.esri.com/metadata/esriprof80.html">
+http://www.esri.com/metadata/esriprof80.html</A>
+</DT>
+<DT><I>Profile_Name:</I>
+ESRI Metadata Profile</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+</BODY>
+</HTML>

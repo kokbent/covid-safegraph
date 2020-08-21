@@ -1,0 +1,4782 @@
+<HTML>
+<HEAD>
+<TITLE> FGDL Documentation </TITLE>
+<STYLE>
+          .pre { color: black; font-size: 12pt; font-weight: normal; font-family: courier; }
+	  strong {font-weight: normal; text-transform: uppercase; }
+</STYLE>
+</HEAD>
+<BODY>
+<table width="90%">
+<tr>
+<td>
+<strong><b>FLORIDA GEOGRAPHIC DATA LIBRARY DOCUMENTATION</b></strong><br />
+<p>
+<strong><b>TITLE: 2015 CENSUS BLOCK GROUPS IN FLORIDA (WITH SELECTED FIELDS FROM THE 2014-2018 AMERICAN COMMUNITY SURVEY)</b></strong>
+</p>
+<pre>
+Geodataset Name:       CENACS_2018
+Geodataset Type:       SHAPEFILE
+Geodataset Feature:    <strong>Polygon</strong>
+Feature Count:         11442
+</pre>
+</td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr>
+<td>
+<strong><b>GENERAL DESCRIPTION:</b></strong>
+<table width="650">
+<tr>
+<td>
+This dataset contains the US Census Bureau 2015 Census Block Groups for the State of Florida with selected fields from the 2014-2018 American Community Survey (ACS). Some of the fields included in this dataset are total population, education, and housing and economic characteristics. This data is at the block group level. In addition, fields have been added and calculated. 
+
+The ACS was designed to replace the long-form of the decennial census. The ACS is a survey that releases data annually. ACS data are survey estimates distributed for 1-, 3-, and 5-year time periods. The 5-year estimates are the only time period estimates that provide data at the block group level. This data is designed for use within the Florida Department of Transportation?s Efficient Transportation Decision Making Process (ETDM). However, the subset of ACS fields included herein is useful for a variety of applications and uses.  If you are looking for census block group data with the decennial census counts, please see the FGDL layer CENBLKGRP_2010.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td></td></tr>
+<tr>
+<td>
+<pre>
+DATA SOURCE(S):                    U.S. Census Bureau
+SCALE OF ORIGINAL SOURCE MAPS:     100000
+GEODATASET EXTENT:                 State of Florida<br />
+PUBLICATION DATE:                  201912
+TIME PERIOD OF CONTENT:            Begin Date: 2014    End Date: 2018
+DOWNLOAD LINK:                     <A href="http://www.fgdl.org/metadataexplorer/explorer.jsp">http://www.fgdl.org/metadataexplorer/explorer.jsp</A>
+</pre>
+</td>
+</tr>
+</table>
+<P>
+<strong><b>FEATURE ATTRIBUTE TABLES:</b></strong>
+</P>
+<pre>Datafile Name: CENACS_2018.DBF</pre>
+<table width="75%" cellspacing="0" cellpadding="0" border="0">
+<tr align="left">
+<td> ITEM NAME </td>
+<td>WIDTH</td>
+<td>TYPE</td>
+<td>N. DECIMAL DEGREES</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">FID
+</DIV>
+</td>
+<td>4</td>
+<td>OID</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">SHAPE
+</DIV>
+</td>
+<td>0</td>
+<td>Geometry</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">STATEFP10
+</DIV>
+</td>
+<td>2</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">COUNTYFP10
+</DIV>
+</td>
+<td>3</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TRACTCE10
+</DIV>
+</td>
+<td>6</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">BLKGRPCE10
+</DIV>
+</td>
+<td>1</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">NAMELSAD
+</DIV>
+</td>
+<td>13</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ALAND
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AWATER
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">INTPTLAT
+</DIV>
+</td>
+<td>11</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">INTPTLON
+</DIV>
+</td>
+<td>12</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">GEOID10
+</DIV>
+</td>
+<td>12</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">LOGRECNO
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ACRES
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">SHAPE_Area
+</DIV>
+</td>
+<td>19</td>
+<td>Double</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TOTALPOP
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HOUSEHOLDS
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MALE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">FEMALE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">WHITE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">BLACK
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AMERI_ES
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ASIAN
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HAWN_PI
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">OTHER
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MULT_RACE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HISPANIC
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">WHITE_NH
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AVE_HH_SZ
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PH_TOTAL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PH_FAM
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PH_NONFAM
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">FAM_HH
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AVE_FAM_SZ
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_UNDER5
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_5_17
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_18_21
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_22_29
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_30_39
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_40_49
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_50_64
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_65_UP
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_65_74
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_75_84
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AGE_85_UP
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MED_AGE
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HABVBELOW
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HBELOW_POV
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HABOVE_POV
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ABVE_BELW
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ABOVE_POV
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">BELOW_POV
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ED_TOTAL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ED_LESS9TH
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ED_12NODIP
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HSGRAD
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ED_SOMECOL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ED_COLLEGE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">BACHELORS
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HSE_UNITS
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HS_PER_AC
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">VACANT
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TRAN_TOTAL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TRAN_CAR
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TRAN_MOTO
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TRAN_BIKE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TRAN_PUB
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TRAN_WALK
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TRAN_OTHER
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TRAN_HOME
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">ENROLLED
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">NOT_ENROLD
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">LESS_10K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I10K_14K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I15K_19K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I20K_24K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I25K_29K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I30K_34K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I35K_39K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I40K_44K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I45K_49K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I50K_59K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I60K_74K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I75K_99K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I100K_124K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I125K_149K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I150K_199K
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">I200KMORE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MEDHHINC
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MEDFINCOME
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HH_NOPUBA
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HH_PUBA
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MEDOOHVAL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">H1ATTACH
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">H1DETACH
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">H2UNIT
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">H3_4UNIT
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">H5_9UNIT
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">H10_19UNIT
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">H20_49UNIT
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">H50MORE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MOBILE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">OTHERHOUSE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">H_SF
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">H_MF
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">OWNER
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">RENTER
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">OWN_17
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">RENT_17
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">B14
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">B10_13
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">B00_09
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">B90_99
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">B80_89
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">B70_79
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">B60_69
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">B50_59
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">B40_49
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">BEFORE39
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">M17
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">M15_16
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">M10_14
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">M00_09
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">M90_99
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">M89BEFORE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MO_17
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MO_15_16
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MO_10_14
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MO_00_09
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MO_90_99
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MO89BEFORE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MR_17
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MR_15_16
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MR_10_14
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MR_00_09
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MR_90_99
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MR89BEFORE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MYTOTAL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MYOWNER
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MYRENTER
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">VEHICLE_0
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">VEHICLE_1
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">VEHICLE_2
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">VEHICLE_3
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">VEHICLE_4
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">VEHICLE5G
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">S_TOTAL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">S_VERYWELL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">S_WELL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">S_NOTWELL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">S_NOTATALL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">S_ENGLISH
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">S_SPANISH
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">S_EUROPE
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">S_ASIAN
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">S_OTHER
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HL_TOTAL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HL_ENGLISH
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HL_SPAN_L
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HL_EURO_L
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HL_ASIAN_L
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">HL_OTHER_L
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">LABOR_CIV
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">RTOTAL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">RU50
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">R50_99
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">R1_124
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">R125ABV
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">RU1
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DIS_TOTAL
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DIS_2064
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">NO_DIS2064
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">GMTOT
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">GMSAME
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">GMDIFF
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">GMABROAD
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_NOTWEL
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_NOTATA
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_NOTWEL
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_NOTATA
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_BACHLR
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_POV
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_RU50
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_R50_9
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_R125AB
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_RU1
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_POP
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">MINORITY
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_WHITE
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_BLACK
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_AMERI
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_ASIAN
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_HAWN
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_OTHER
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_MULTI
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_HISP
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DEN_DIS20
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_WHITE
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_BLACK
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_AMERI
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_ASIAN
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_HAWN
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_OTHER
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_MULTI
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_HISP
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">PCT_DIS20
+</DIV>
+</td>
+<td>19</td>
+<td>Number</td>
+<td>8</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DESCRIPT
+</DIV>
+</td>
+<td>12</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">FGDLAQDATE
+</DIV>
+</td>
+<td>8</td>
+<td>Date</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">TIGERYEAR
+</DIV>
+</td>
+<td>25</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">AUTOID
+</DIV>
+</td>
+<td>10</td>
+<td>Number</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">DATAYEAR
+</DIV>
+</td>
+<td>25</td>
+<td>String</td>
+<td>---</td>
+</tr>
+<tr>
+<td>
+<DIV align="left">SHAPE_LEN
+</DIV>
+</td>
+<td>19</td>
+<td>Float</td>
+<td>11</td>
+</tr>
+</table>
+<p>
+<strong><b>FEATURE ATTRIBUTE TABLES CODES AND VALUES:</b></strong>
+</p>
+<P />
+<table width="75%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td width="30%">Item<pre></pre></td>
+<td>Item Description<pre></pre></td>
+</tr>
+<tr valign="top">
+<td>FID</td>
+<td>
+Internal feature number.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>SHAPE</td>
+<td>
+Feature geometry.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>STATEFP10</td>
+<td>
+2010 Census state Federal Information Processing Standards<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>COUNTYFP10</td>
+<td>
+2010 Census county Federal Information Processing Standards<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TRACTCE10</td>
+<td>
+2010 Census census tract code<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>BLKGRPCE10</td>
+<td>
+2010 Census block group number<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>NAMELSAD</td>
+<td>
+2015 Census translated legal/statistical area description and the block group number<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ALAND</td>
+<td>
+2015 Census land area (square meters)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AWATER</td>
+<td>
+2015 Census water area (square meters)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>INTPTLAT</td>
+<td>
+2015 Census latitude of the internal point<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>INTPTLON</td>
+<td>
+2015 Census longitude of the internal point<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>GEOID10</td>
+<td>
+Block identifier; a concatenation of 2010 Census state Federal Information Processing Standards (FIPS) code, county FIPS code, census tract code, census block group code<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>LOGRECNO</td>
+<td>
+Unique ID used to join ACS 2012-2016 data to proper Block Group<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ACRES</td>
+<td>
+Acres<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>SHAPE_Area</td>
+<td>
+Area of feature in internal units squared.<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TOTALPOP</td>
+<td>
+Total Population - [B01003_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HOUSEHOLDS</td>
+<td>
+Total: Households - [B11001_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MALE</td>
+<td>
+Population Male  - [B01001_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>FEMALE</td>
+<td>
+Population Female - [B01001_026]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>WHITE</td>
+<td>
+Population White alone - [B02001_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>BLACK</td>
+<td>
+Population Black or African American alone - [B02001_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AMERI_ES</td>
+<td>
+Population American Indian and Alaska Native alone - [B02001_004]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ASIAN</td>
+<td>
+Population Asian alone - [B02001_005]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HAWN_PI</td>
+<td>
+Population Native Hawaiian and Other Pacific Islander alone - [B02001_006]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>OTHER</td>
+<td>
+Population Some other race alone - [B02001_007]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MULT_RACE</td>
+<td>
+Population Two or more races - [B02001_008]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HISPANIC</td>
+<td>
+Population Hispanic or Latino by Race - [B03002_012]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>WHITE_NH</td>
+<td>
+Not Hispanic or Latino:White alone - [B03002_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AVE_HH_SZ</td>
+<td>
+Average household size Total: Average Household Size of Occupied Housing Units by Tenure - [B25010_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PH_TOTAL</td>
+<td>
+Total: Household Type by Relatives and Nonrelatives for Population in Households - [B11002_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PH_FAM</td>
+<td>
+Population in family households - [B11002_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PH_NONFAM</td>
+<td>
+Population in nonfamily households - [B11002_012]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>FAM_HH</td>
+<td>
+Family households - [B11001_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AVE_FAM_SZ</td>
+<td>
+Average family size (Total Population In family households/Family households)  - [PH_FAM]/[FAM_HH]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_UNDER5</td>
+<td>
+Population Under 5 years     - [B01001_003] + [B01001_027]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_5_17</td>
+<td>
+Population 5 to 17 years      - [B01001_004] + [B01001_028] + [B01001_005] + [B01001_029] + [B01001_006] + [B01001_030]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_18_21</td>
+<td>
+Population 18 to 21 years   - [B01001_007] + [B01001_031] + [B01001_008] + [B01001_032] + [B01001_009] + [B01001_033]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_22_29</td>
+<td>
+Population 22 to 29 years    - [B01001_010] + [B01001_034] + [B01001_011] + [B01001_035]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_30_39</td>
+<td>
+Population 30 to 39 years    - [B01001_012] + [B01001_036] + [B01001_013] + [B01001_037]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_40_49</td>
+<td>
+Population 40 to 49 years    - [B01001_014] + [B01001_038] + [B01001_015] + [B01001_039]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_50_64</td>
+<td>
+Population 50 to 64 years    - [B01001_016] + [B01001_040] + [B01001_017] + [B01001_041] + [B01001_018] + [B01001_042] + [B01001_019] + [B01001_043]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_65_UP</td>
+<td>
+Population 65 and up   - [B01001_020] + [B01001_044] + [B01001_021] + [B01001_045] + [B01001_022] + [B01001_046] + [B01001_023] + [B01001_047] + [B01001_024] + [B01001_048] + [B01001_025] + [B01001_049]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_65_74</td>
+<td>
+Population 65 to 74 years   - [B01001_020] + [B01001_044] + [B01001_021] + [B01001_045] + [B01001_022] + [B01001_046]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_75_84</td>
+<td>
+Population 75 to 84 years    - [B01001_023] + [B01001_047] + [B01001_024] + [B01001_048]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AGE_85_UP</td>
+<td>
+Population 85 years and over - [B01001_025] + [B01001_049]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MED_AGE</td>
+<td>
+Median age for population - [B01002_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HABVBELOW</td>
+<td>
+Households Total: households for poverty status in the past 12 months by household type by age of householder - [B17017_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HBELOW_POV</td>
+<td>
+Households with income in the past 12 months below poverty level - [B17017_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HABOVE_POV</td>
+<td>
+Households with income in the past 12 months at or above poverty level - [B17017_031]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ABVE_BELW</td>
+<td>
+Population Total: Poverty Status of Individuals in the Past 12 Months by Living Arrangement - [B17021_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ABOVE_POV</td>
+<td>
+Population with income in the past 12 months at or above poverty level - [B17021_019]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>BELOW_POV</td>
+<td>
+Population with income in the past 12 months below poverty level - [B17021_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ED_TOTAL</td>
+<td>
+Population Total: Sex by Educational Attainment for the Population 25 Years and over  - [B15002_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ED_LESS9TH</td>
+<td>
+Educational Attainment for the Population 25 Years and over No schooling completed, Nursery to 4th grade, 5th and 6th grade, 7th and 8th grade  - [B15002_003] + [B15002_020] + [B15002_004] + [B15002_021] + [B15002_005] + [B15002_022] + [B15002_006] + [B15002_023]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ED_12NODIP</td>
+<td>
+Educational Attainment for the Population 25 Years and over 9th grade, 10th grade, 11th grade, 12th grade, no diploma - [B15002_007] + [B15002_024] + [B15002_008] + [B15002_025] + [B15002_009] + [B15002_026] + [B15002_010] + [B15002_027]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HSGRAD</td>
+<td>
+Educational Attainment for the Population 25 Years and over High school graduate, GED (includes equivalency) - [B15002_011] + [B15002_028] + [B15002_012] + [B15002_029] + [B15002_013] + [B15002_030] + [B15002_014] + [B15002_031] + [B15002_015] + [B15002_032] + [B15002_016] + [B15002_033] + [B15002_017] + [B15002_034] + [B15002_018] + [B15002_035]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ED_SOMECOL</td>
+<td>
+Educational Attainment for the Population 25 Years and over Some college - less than 1 year, Some college - 1 or more years no degree, Associate's degree - [B15002_012] + [B15002_029] + [B15002_013] + [B15002_030] + [B15002_014] + [B15002_031]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ED_COLLEGE</td>
+<td>
+Educational Attainment for the Population 25 Years and over Bachelor's degree, Master's degree, Professional school degree, Doctorate degree - [B15002_015] + [B15002_032] + [B15002_016] + [B15002_033] + [B15002_017] + [B15002_034] + [B15002_018] + [B15002_035]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>BACHELORS</td>
+<td>
+Educational Attainment for the Population 25 Years and over Bachelor's degree only - [B15002_015] + [B15002_032]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HSE_UNITS</td>
+<td>
+Total Housing Units  - [B25001_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HS_PER_AC</td>
+<td>
+Housing units per acre - [HSE_UNITS]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>VACANT</td>
+<td>
+Total Vacant housing units - [B25004_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TRAN_TOTAL</td>
+<td>
+Means of Transportation to Work Total, workers 16 years and over - [B08301_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TRAN_CAR</td>
+<td>
+Means of Transportation to Work Car, truck, or van - [B08301_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TRAN_MOTO</td>
+<td>
+Means of Transportation to Work Motorcycle - [B08301_017]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TRAN_BIKE</td>
+<td>
+Means of Transportation to Work Bicycle - [B08301_018]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TRAN_PUB</td>
+<td>
+Means of Transportation to Work Public transportation (excluding taxicab) - [B08301_010]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TRAN_WALK</td>
+<td>
+Means of Transportation to Work Walked - [B08301_019]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TRAN_OTHER</td>
+<td>
+Means of Transportation to Work Other means - [B08301_020]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TRAN_HOME</td>
+<td>
+Means of Transportation to Work Worked at home - [B08301_021]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>ENROLLED</td>
+<td>
+Population 3 Years And Over Enrolled In School - [B14002_003] + [B14002_027]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>NOT_ENROLD</td>
+<td>
+Population 3 Years And Over Not enrolled in school - [B14002_025] + [B14002_049]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>LESS_10K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months Less than $10,000 (in 2018 Inflation-Adjusted Dollars) - [B19001_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I10K_14K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $10,000 to $14,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I15K_19K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $15,000 to $19,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_004]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I20K_24K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $20,000 to $24,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_005]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I25K_29K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $25,000 to $29,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_006]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I30K_34K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $30,000 to $34,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_007]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I35K_39K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $35,000 to $39,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_008]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I40K_44K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $40,000 to $44,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_009]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I45K_49K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $45,000 to $49,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_010]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I50K_59K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $50,000 to $59,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_011]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I60K_74K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $60,000 to $74,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_012]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I75K_99K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $75,000 to $99,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_013]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I100K_124K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $100,000 to $124,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_014]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I125K_149K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $125,000 to $149,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_015]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I150K_199K</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $150,000 to $199,999 (in 2018 Inflation-Adjusted Dollars) - [B19001_016]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>I200KMORE</td>
+<td>
+Number of Households with Household Income in The Past 12 Months $200,000 or more (in 2018 Inflation-Adjusted Dollars) - [B19001_017]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MEDHHINC</td>
+<td>
+Median household income in the past 12 months (in 2018 inflation-adjusted dollars) - [B19013_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MEDFINCOME</td>
+<td>
+Median family income in the past 12 months (in 2018 inflation-adjusted dollars) - [B19113_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HH_NOPUBA</td>
+<td>
+Households with No public assistance income - [B19057_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HH_PUBA</td>
+<td>
+Households with public assistance income - [B19057_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MEDOOHVAL</td>
+<td>
+Median value (dollars) Owner-occupied housing units - [B25077_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>H1ATTACH</td>
+<td>
+Housing Units in Structure 1, attached - [B25024_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>H1DETACH</td>
+<td>
+Housing Units in Structure 1, detached - [B25024_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>H2UNIT</td>
+<td>
+Housing Units in Structure 2 - [B25024_004]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>H3_4UNIT</td>
+<td>
+Housing Units in Structure 3 or 4 - [B25024_005]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>H5_9UNIT</td>
+<td>
+Housing Units in Structure 5 to 9 - [B25024_006]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>H10_19UNIT</td>
+<td>
+Housing Units in Structure 10 to 19 - [B25024_007]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>H20_49UNIT</td>
+<td>
+Housing Units in Structure 20 to 49 - [B25024_008]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>H50MORE</td>
+<td>
+Housing Units in Structure 50 or more - [B25024_009]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MOBILE</td>
+<td>
+Housing Units in Structure Mobile home - [B25024_010]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>OTHERHOUSE</td>
+<td>
+Housing Units in Structure Boat, RV, van, etc. - [B25024_011]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>H_SF</td>
+<td>
+Single Family  - [H1ATTACH]+ [H1DETACH]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>H_MF</td>
+<td>
+Mulit Family - [H2UNIT] + [H3_4UNIT] + [H5_9UNIT] + [H10_19UNIT] + [H20_49UNIT] + [H50MORE]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>OWNER</td>
+<td>
+Owner occupied housing units - [B25038_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>RENTER</td>
+<td>
+Renter occupied housing units - [B25038_009]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>OWN_17</td>
+<td>
+Owner occupied housing units Moved in 2017 or later - [B25038_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>RENT_17</td>
+<td>
+Renter occupied housing units Moved in 2017 or later - [B25038_010]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>B14</td>
+<td>
+Housing Units Built 2014 or later - [B25034_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>B10_13</td>
+<td>
+Housing Units Built 2010 to 2013 - [B25034_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>B00_09</td>
+<td>
+Housing Units Built 2000 to 2009 - [B25034_004]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>B90_99</td>
+<td>
+Housing Units Built 1990 to 1999 - [B25034_005]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>B80_89</td>
+<td>
+Housing Units Built 1980 to 1989 - [B25034_006]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>B70_79</td>
+<td>
+Housing Units Built 1970 to 1979 - [B25034_007]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>B60_69</td>
+<td>
+Housing Units Built 1960 to 1969 - [B25034_008]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>B50_59</td>
+<td>
+Housing Units Built 1950 to 1959 - [B25034_009]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>B40_49</td>
+<td>
+Housing Units Built 1940 to 1949 - [B25034_010]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>BEFORE39</td>
+<td>
+Housing Units Built 1939 or earlier - [B25034_011]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>M17</td>
+<td>
+Occupied housing units moved in 2017 or later - [B25038_003] + [B25038_010]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>M15_16</td>
+<td>
+Occupied housing units Moved in 2015 to 2016 - [B25038_004] + [B25038_011]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>M10_14</td>
+<td>
+Occupied housing units Moved in 2010 to 2014 - [B25038_005] + [B25038_012]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>M00_09</td>
+<td>
+Occupied housing units Moved in 2000 to 2009 - [B25038_006] + [B25038_013]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>M90_99</td>
+<td>
+Occupied housing units Moved in 1990 to 1999 - [B25038_007] + [B25038_014]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>M89BEFORE</td>
+<td>
+Occupied housing units Moved in 1989 or earlier - [B25038_008] + [B25038_015]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MO_17</td>
+<td>
+Owner Occupied housing units moved in 2017 or later - [B25038_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MO_15_16</td>
+<td>
+Owner Occupied housing units Moved in 2015 to 2016 - [B25038_004]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MO_10_14</td>
+<td>
+Owner Occupied housing units Moved in 2010 to 2014 - [B25038_005]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MO_00_09</td>
+<td>
+Owner Occupied housing units Moved in 2000 to 2009 - [B25038_006]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MO_90_99</td>
+<td>
+Owner Occupied housing units Moved in 1990 to 1999 - [B25038_007]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MO89BEFORE</td>
+<td>
+Owner Occupied housing units Moved in 1989 or earlier - [B25038_008]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MR_17</td>
+<td>
+Renter Occupied housing units moved in 2017 or later - [B25038_010]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MR_15_16</td>
+<td>
+Renter Occupied housing units Moved in 2015 to 2016 - [B25038_011]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MR_10_14</td>
+<td>
+Renter Occupied housing units Moved in 2010 to 2014 - [B25038_012]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MR_00_09</td>
+<td>
+Renter Occupied housing units Moved in 2000 to 2009 - [B25038_013]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MR_90_99</td>
+<td>
+Renter Occupied housing units Moved in 1990 to 1999 - [B25038_014]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MR89BEFORE</td>
+<td>
+Renter Occupied housing units Moved in 1989 or earlier - [B25038_015]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MYTOTAL</td>
+<td>
+Median year householder moved into unit - Occupied Housing Units Total - [B25039_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MYOWNER</td>
+<td>
+Median year householder moved into unit - Occupied Housing Units Owner - [B25039_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MYRENTER</td>
+<td>
+Median year householder moved into unit - Occupied Housing Units Renter - [B25039_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>VEHICLE_0</td>
+<td>
+Occupied Housing Units with No vehicle available - [B25044_003] + [B25044_010]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>VEHICLE_1</td>
+<td>
+Occupied Housing Units with 1 vehicle available - [B25044_004] + [B25044_011]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>VEHICLE_2</td>
+<td>
+Occupied Housing Units with 2 vehicles available - [B25044_005] + [B25044_012]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>VEHICLE_3</td>
+<td>
+Occupied Housing Units with 3 vehicles available  - [B25044_006] + [B25044_013]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>VEHICLE_4</td>
+<td>
+Occupied Housing Units with 4 vehicles available - [B25044_007] + [B25044_014]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>VEHICLE5G</td>
+<td>
+Occupied Housing Units with 5 or more vehicles available - [B25044_008] + [B25044_015]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>S_TOTAL</td>
+<td>
+Ability to Speak English for the Population 5+ Yrs Total - [B16004_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>S_VERYWELL</td>
+<td>
+Ability to Speak English for the Population 5+ Yrs Speak English 'very well' - [B16004_005] + [B16004_010] + [B16004_015] + [B16004_020] + [B16004_027] + [B16004_032] + [B16004_037] + [B16004_042] + [B16004_049] + [B16004_054] + [B16004_059] + [B16004_064]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>S_WELL</td>
+<td>
+Ability to Speak English for the Population 5+ Yrs Speak English 'well' - [B16004_006] + [B16004_011] + [B16004_016] + [B16004_021] + [B16004_028] + [B16004_033] + [B16004_038] + [B16004_043] + [B16004_050] + [B16004_055] + [B16004_060] + [B16004_065]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>S_NOTWELL</td>
+<td>
+Ability to Speak English for the Population 5+ Yrs Speak English 'not well' - [B16004_007] + [B16004_012] + [B16004_017] + [B16004_022] + [B16004_029] + [B16004_034] + [B16004_039] + [B16004_044] + [B16004_051] + [B16004_056] + [B16004_061] + [B16004_066]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>S_NOTATALL</td>
+<td>
+Ability to Speak English for the Population 5+ Yrs Speak English 'not at all' - [B16004_008] + [B16004_013] + [B16004_018] + [B16004_023] + [B16004_030] + [B16004_035] + [B16004_040] + [B16004_045] + [B16004_052] + [B16004_057] + [B16004_062] + [B16004_067]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>S_ENGLISH</td>
+<td>
+Ability to Speak English for the Population 5+ Yrs Speak only English - [B16004_003] + [B16004_025] + [B16004_047]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>S_SPANISH</td>
+<td>
+Ability to Speak English for the Population 5+ Yrs Speak Spanish - [B16004_004] + [B16004_026] + [B16004_048]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>S_EUROPE</td>
+<td>
+Ability to Speak English for the Population 5+ Yrs Speak other Indo-European languages - [B16004_009] + [B16004_031] + [B16004_053]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>S_ASIAN</td>
+<td>
+Ability to Speak English for the Population 5+ Yrs Speak Asian and Pacific Island languages - [B16004_014] + [B16004_036] + [B16004_058]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>S_OTHER</td>
+<td>
+Ability to Speak English for the Population 5+ Yrs Speak other languages - [B16004_019] + [B16004_041] + [B16004_063]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HL_TOTAL</td>
+<td>
+Total Households by Household Language by Household Limited English Speaking Status  - [C16002_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HL_ENGLISH</td>
+<td>
+Households that speak English. This includes households that are English only, or that speak other languages but are not a limited English speaking household. - [C16002_002] + [C16002_005]+ [C16002_008]+ [C16002_011]+ [C16002_014]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HL_SPAN_L</td>
+<td>
+Households that speak Spanish: Limited English speaking household - [C16002_004]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HL_EURO_L</td>
+<td>
+Households that speak Other Indo-European languages: Limited English speaking household - [C16002_007]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HL_ASIAN_L</td>
+<td>
+Households that speak Asian and Pacific Island languages: Limited English speaking household - [C16002_010]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>HL_OTHER_L</td>
+<td>
+Households that speak Other languages: Limited English speaking household - [C16002_013]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>LABOR_CIV</td>
+<td>
+Civilian Employed Population 16 Years And Over Total - [C24010_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>RTOTAL</td>
+<td>
+Ratio of Income to Poverty Level in the Past 12 Months. Total population for whom Poverty Status is Determined - [C17002_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>RU50</td>
+<td>
+Ratio of Income to Poverty Level in the Past 12 Months Under .50 - [C17002_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>R50_99</td>
+<td>
+Ratio of Income to Poverty Level in the Past 12 Months .50 to .99 - [C17002_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>R1_124</td>
+<td>
+Ratio of Income to Poverty Level in the Past 12 Months 1.00 to 1.24 - [C17002_004]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>R125ABV</td>
+<td>
+Ratio of Income to Poverty Level in the Past 12 Months 1.25 and over - [C17002_005] + [C17002_006] + [C17002_007] + [C17002_008]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>RU1</td>
+<td>
+Ratio of Income to Poverty Level in the Past 12 Months under 1 - [RU50] + [R50_99]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DIS_TOTAL</td>
+<td>
+Population by Poverty Status in the Past 12 Months by Disability Status by Employment Status for the Population 20 to 64 Years Total - [B23024_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DIS_2064</td>
+<td>
+Population 20 to 64 Years with Income in the past 12 months below and above poverty level with a disability - [B23024_003] + [B23024_018]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>NO_DIS2064</td>
+<td>
+Population 20 to 64 Years with Income in the past 12 months below and above poverty level with No disability - [B23024_010] + [B23024_025]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>GMTOT</td>
+<td>
+Geographical Mobility in the Past Year for Current Residence Population 1 Year And Over Living in and out of Metropolitan Statistical Areas or Micropolitan Statistical Areas In The United States: Total - [B07201_001] + [B07202_001] + [B07203_001]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>GMSAME</td>
+<td>
+Geographical Mobility in the Past Year for Current Residence Population 1 Year And Over Living in and out of Metropolitan Statistical Areas or Micropolitan Statistical Areas In The United States: Same house 1 year ago - [B07201_002] + [B07202_002] + [B07203_002]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>GMDIFF</td>
+<td>
+Geographical Mobility in the Past Year for Current Residence Population 1 Year And Over Living in and out of Metropolitan Statistical Areas or Micropolitan Statistical Areas In The United States: Different house in United States 1 year ago - [B07201_003] + [B07202_003] + [B07203_003]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>GMABROAD</td>
+<td>
+Geographical Mobility in the Past Year for Current Residence Population 1 Year And Over Living in and out of Metropolitan Statistical Areas or Micropolitan Statistical Areas In The United States: Abroad 1 year ago - [B07201_014] + [B07202_014] + [B07203_011]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_NOTWEL</td>
+<td>
+Percent Ability to Speak English for the Population 5+ Yrs Speak English 'not well' - ([S_NOTWELL]/[S_TOTAL] * 100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_NOTATA</td>
+<td>
+Percent Ability to Speak English for the Population 5+ Yrs Speak English 'not at all' - ([S_NOTATALL]/[S_TOTAL] * 100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_NOTWEL</td>
+<td>
+Density per acre of Ability to Speak English for the Population 5+ Yrs Speak English 'not well' - [S_NOTWELL]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_NOTATA</td>
+<td>
+Density per acre of Ability to Speak English for the Population 5+ Yrs Speak English 'not at all' - [S_NOTATALL]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_BACHLR</td>
+<td>
+Percent Educational Attainment for the Population 25 Years and over Bachelor's degree only - ([BACHELORS]/[TOTALPOP] * 100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_POV</td>
+<td>
+Percent Population with income in the past 12 months below poverty level - ([BELOW_POV]/[ABVE_BELW] * 100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_RU50</td>
+<td>
+Percent Ratio of Income to Poverty Level in the Past 12 Months Under .50 - ([RU50]/[RTOTAL] * 100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_R50_9</td>
+<td>
+RPercent atio of Income to Poverty Level in the Past 12 Months .50 to .99 - ([R50_99]/[RTOTAL] * 100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_R125AB</td>
+<td>
+Percent Ratio of Income to Poverty Level in the Past 12 Months 1.25 and over - ([R125ABV]/[RTOTAL] * 100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_RU1</td>
+<td>
+Percent Ratio of Income to Poverty Level in the Past 12 Months under 1 - ([RU1]/[RTOTAL] * 100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_POP</td>
+<td>
+Population per acre - [TOTALPOP]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>MINORITY</td>
+<td>
+"Minority Population" is the population that lists their racial status as a race other than white alone and-or lists their ethnicity as Hispanic or Latino. That is, all people other than non-Hispanic white-alone individuals. The word "alone" in this case indicates that the person is of a single race, not multiracial - [TOTALPOP] - [WHITE_NH]  - [TOTALPOP] - [WHITE_NH]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_WHITE</td>
+<td>
+Density per acre of Persons White alone - [WHITE]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_BLACK</td>
+<td>
+Density per acre of Persons Black or African American alone - [BLACK]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_AMERI</td>
+<td>
+Density per acre of Persons American Indian and Alaska Native alone - [AMERI_ES]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_ASIAN</td>
+<td>
+Density per acre of Persons Asian alone - [ASIAN]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_HAWN</td>
+<td>
+Density per acre of Persons Native Hawaiian and Other Pacific Islander alone - [HAWN_PI]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_OTHER</td>
+<td>
+Density per acre of Persons Some other race alone - [OTHER]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_MULTI</td>
+<td>
+Density per acre of Persons Two or more races - [MULT_RACE]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_HISP</td>
+<td>
+Density per acre of Persons Hispanic or Latino - [HISPANIC]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DEN_DIS20</td>
+<td>
+Density per acre of Population 20 To 64 Years With a disability - [DIS_2064]/[ACRES]<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_WHITE</td>
+<td>
+Percent of Persons White alone - ([WHITE] /[TOTALPOP] *100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_BLACK</td>
+<td>
+Percent of Persons Black or African American alone - ([BLACK] /[TOTALPOP] *100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_AMERI</td>
+<td>
+Percent of Persons American Indian and Alaska Native alone - ([AMERI_ES] /[TOTALPOP] *100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_ASIAN</td>
+<td>
+Percent of Persons Asian alone - ([ASIAN] /[TOTALPOP] *100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_HAWN</td>
+<td>
+Percent of Persons Native Hawaiian and Other Pacific Islander alone - ([HAWN_PI] /[TOTALPOP] *100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_OTHER</td>
+<td>
+Percent of Persons Some other race alone - ([OTHER] /[TOTALPOP] *100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_MULTI</td>
+<td>
+Percent of Persons Two or more races - ([MULT_RACE] /[TOTALPOP] *100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_HISP</td>
+<td>
+Percent of Persons Hispanic or Latino - ([HISPANIC] /[TOTALPOP] *100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>PCT_DIS20</td>
+<td>
+Percent Population 20 To 64 Years With a disability - ([DIS_2064]/[DIS_TOTAL] * 100)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DESCRIPT</td>
+<td>
+GeoPlan added field based on GEOID10<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>FGDLAQDATE</td>
+<td>
+Date ACS data was downloaded from U.S. Census Bureau<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>TIGERYEAR</td>
+<td>
+Source date for Tiger data (spatial portion of this layer)<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>AUTOID</td>
+<td>
+No description<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>DATAYEAR</td>
+<td>
+Source Date of ACS data<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+<tr valign="top">
+<td>SHAPE_LEN</td>
+<td>
+No description<table>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+<br />
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>
+<pre></pre>
+</td>
+</tr>
+</table>
+<strong><b>USER NOTES:</b></strong>
+<br />
+<table width="500">
+<tr>
+<td>
+<pre>
+This data is provided 'as is'. GeoPlan relied on the integrity
+of the original data layer's topology
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+This data is provided 'as is' by GeoPlan and is complete to our
+knowledge.
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+GeoPlan relied on the integrity of the attribute information within
+the original data.
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+For the research and analysis of the 2007-2011 American 
+Community Survey (ACS) at the Census Block Group 
+geography level. The data contains selected fields from the 
+2007-2011 ACS. Census Block Groups are geographic entities 
+made up of Census Blocks and that are contained within the 
+same Census Tract. Block Groups generally contain between 
+600 and 3,000 people, with an optimum size of 1,500 people.<br /><br />
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+This data is provided 'as is' and its horizontal positional accuracy
+has not been verified by GeoPlan<br /><br />
+</pre>
+</td>
+</tr>
+</table>
+<table width="500">
+<tr>
+<td>
+<pre>
+This data is provided 'as is' and its vertical positional accuracy
+has not been verified by GeoPlan<br /><br />
+</pre>
+</td>
+</tr>
+</table>
+<table width="550">
+<tr>
+<td>
+<pre>
+NONE</pre>
+<br />
+</td>
+</tr>
+</table>
+<table width="550">
+<tr>
+<td>
+<pre>
+The Florida Geographic Data Library is a collection of Geospatial Data
+compiled by the University of Florida GeoPlan Center with support from
+the Florida Department of Transportation. GIS data available in FGDL is
+collected from various state, federal, and other agencies (data sources)
+who are data stewards, producers, or publishers. The data available in
+FGDL may not be the most current version of the data offered by the
+data source. University of Florida GeoPlan Center makes no guarantees
+about the currentness of the data and suggests that data users check
+with the data source to see if more recent versions of the data exist.
+
+Furthermore, the GIS data available in the FGDL are provided 'as is'.
+The University of Florida GeoPlan Center makes no warranties, guaranties
+or representations as to the truth, accuracy or completeness of the data
+provided by the data sources. The University of Florida GeoPlan Center
+makes no representations or warranties about the quality or suitability
+of the materials, either expressly or implied, including but not limited
+to any implied warranties of merchantability, fitness for a particular
+purpose, or non-infringement. The University of Florida GeoPlan Center
+shall not be liable for any damages suffered as a result of using,
+modifying, contributing or distributing the materials.
+
+A note about data scale: 
+
+Scale is an important factor in data usage.  Certain scale datasets
+are not suitable for some project, analysis, or modeling purposes.
+Please be sure you are using the best available data. 
+
+1:24000 scale datasets are recommended for projects that are at the
+county level.
+1:24000 data should NOT be used for high accuracy base mapping such
+as property parcel boundaries.
+1:100000 scale datasets are recommended for projects that are at the
+multi-county or regional level.
+1:125000 scale datasets are recommended for projects that are at the
+regional or state level or larger.
+
+Vector datasets with no defined scale or accuracy should be
+considered suspect. Make sure you are familiar with your data
+before using it for projects or analysis. Every effort has been
+made to supply the user with data documentation. For additional
+information, see the References section and the Data Source Contact
+section of this documentation. For more information regarding
+scale and accuracy, see our webpage at:
+http://geoplan.ufl.edu/education.html</pre>
+<br />
+</td>
+</tr>
+</table>
+<strong><b>REFERENCES: </b></strong>
+<table width="60%">
+<tr>
+<td>
+<pre>
+2012-2016 ACS Summary File Tech Document: 
+https://www2.census.gov/programs-surveys/acs/summary_file/2016/documentation/tech_docs/2016_SummaryFile_Tech_Doc.pdf
+</pre>
+<br />
+</td>
+</tr>
+</table>
+<strong><b>DATA LINEAGE SUMMARY: </b></strong>
+<br />
+<table width="60%">
+<tr>
+<td>
+<pre>
+The 2015 TIGER line files were downloaded from the following site:
+https://www.census.gov/geo/maps-data/data/tiger-geodatabases.html
+date downloaded 12/13/16
+
+The data was projected to Albers HPGN.
+
+
+The American Community Survey data was downloaded 
+from the Census Bureau in .csv format from:
+https://www2.census.gov/programs-surveys/acs/summary_file/2017/data/5_year_by_state/
+date downloaded: 1/8/20
+
+Changed name from tlgdb_2015_a_12_fl_931.gdb\Block_Group to CENACS_2018
+ 
+A variety of GIS techniques including python scripting were used to parse, 
+aggregate, and join the tabular demographic data to the spatial data. The result is a 
+feature class with logically named fields that are made up of one or more census 
+fields.
+Process Date: 20200128
+<br />
+</pre>
+</td>
+</tr>
+</table>
+<strong><b>MAP PROJECTION PARAMETERS: </b></strong>
+<br />
+<pre>
+Projection                          ALBERS
+Datum                               HPGN
+Units                               METERS
+Spheroid                            GRS1980
+1st Standard Parallel               24  0  0.000
+2nd Standard Parallel               31 30  0.000
+Central Meridian                   -84 00  0.000
+Latitude of Projection's Origin     24  0  0.000
+False Easting (meters)              400000.00000
+False Northing (meters)             0.00000
+</pre>
+<p>
+<strong><b>DATA SOURCE CONTACT (S):</b></strong>
+</p>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<pre>
+Name:
+Abbr. Name:
+Address:
+
+
+Phone:
+
+Web site:
+E-mail:
+Contact Person:
+         Phone:
+        E-mail:
+</pre>
+</td>
+<td valign="top"><pre>U.S. Department of Commerce, U.S. Census Bureau, Geography Division, Geographic Products Branch
+U.S. Census Bureau
+4600 Silver Hill Road, Stop 7400
+Washington, D.C.
+20233-7400
+301-763-1128
+<br />
+www.census.gov
+geo.tiger@census.gov
+REQUIRED: The person responsible for the metadata information.
+</pre>
+</td>
+</tr>
+</table>
+<br />
+<strong><b>FGDL CONTACT:</b></strong>
+<pre>
+Name:                   FLORIDA GEOGRAPHIC DATA LIBRARY
+Abbr. Name:             FGDL
+Address:                Florida Geographic Data Library
+                        431 Architecture Building
+                        PO Box 115706
+                        Gainesville, FL  32611-5706
+Web site:               <a href="http://www.fgdl.org">http://www.fgdl.org</a>
+
+Contact FGDL: 
+
+      Technical Support:	        <a href="http://www.fgdl.org/fgdlfeed.html">http://www.fgdl.org/fgdlfeed.html</a>
+      FGDL Frequently Asked Questions:  <a href="http://www.fgdl.org/fgdlfaq.html">http://www.fgdl.org/fgdlfaq.html</a>
+      FGDL Mailing Lists:		<a href="http://www.fgdl.org/fgdl-l.html">http://www.fgdl.org/fgdl-l.html</a>
+      For FGDL Software:                <a href="http://www.fgdl.org/software.html">http://www.fgdl.org/software.html</a>
+</pre>
+</BODY>
+</HTML>
