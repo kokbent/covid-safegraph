@@ -25,7 +25,7 @@ cbg1 <- cbg %>%
 
 #### Safegraph SDM data ----
 drive_auth(email = "kokbent@ufl.edu", use_oob = T)
-drive_download("sdm-consolidated-2020-08-21-reduced.csv", "data/sdm-consolidated.csv",
+drive_download("sdm-consolidated-2020-08-31-reduced.csv", "data/sdm-consolidated.csv",
                overwrite = T)
 
 #### Data Wrangling ----
@@ -75,10 +75,11 @@ for (i in 1:length(counties)) {
     select(date, county, prop_non_home = perc_non_home, 
            prop_non_home_ma7 = perc_non_home_ma7) %>%
     mutate(prop_non_home = prop_non_home / 100,
-           prop_non_home_ma7 = fill_NA_w_neighbour(prop_non_home_ma7 / 100))
+           #prop_non_home_ma7 = fill_NA_w_neighbour(prop_non_home_ma7 / 100),
+           prop_non_home_ma7 = prop_non_home_ma7 / 100)
   
-  outfile <- paste0("output/mobility-", tolower(nombre), ".csv")
-  data.table::fwrite(df, outfile)
+  # outfile <- paste0("output/mobility-", tolower(nombre), ".csv")
+  # data.table::fwrite(df, outfile)
   
   comb_df <- bind_rows(comb_df, df)
 }
@@ -90,5 +91,18 @@ ggplot(comb_df) +
 
 ggplot(comb_df) +
   geom_line(aes(date, prop_non_home_ma7, colour = county)) +
+  theme_bw() +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b")
+
+#### Proportion baseline
+comb_df1 <- comb_df %>%
+  group_by(county) %>%
+  mutate(baseline = mean(prop_non_home[date >= ymd("2020-01-01") & date <= ymd("2020-02-29")],
+                         na.rm = T)) %>%
+  mutate(ratio_ma7 = prop_non_home_ma7 / baseline)
+
+ggplot(comb_df1) +
+  geom_line(aes(date, ratio_ma7, colour = county)) +
+  geom_hline(yintercept = 1) +
   theme_bw() +
   scale_x_date(date_breaks = "1 month", date_labels = "%b")
