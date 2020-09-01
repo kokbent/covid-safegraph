@@ -75,11 +75,15 @@ for (i in 1:length(counties)) {
     select(date, county, prop_non_home = perc_non_home, 
            prop_non_home_ma7 = perc_non_home_ma7) %>%
     mutate(prop_non_home = prop_non_home / 100,
-           #prop_non_home_ma7 = fill_NA_w_neighbour(prop_non_home_ma7 / 100),
-           prop_non_home_ma7 = prop_non_home_ma7 / 100)
+           prop_non_home_ma7 = fill_NA_w_neighbour(prop_non_home_ma7),
+           prop_non_home_ma7 = prop_non_home_ma7 / 100,
+           sgmi_comp = 1 - prop_non_home_ma7)
   
-  # outfile <- paste0("output/mobility-", tolower(nombre), ".csv")
-  # data.table::fwrite(df, outfile)
+  df <- df %>%
+    select(date, sgmi_comp, county, prop_non_home, prop_non_home_ma7)
+  
+  outfile <- paste0("output/mobility_comp-", tolower(nombre), ".csv")
+  data.table::fwrite(df, outfile)
   
   comb_df <- bind_rows(comb_df, df)
 }
