@@ -25,7 +25,7 @@ cbg1 <- cbg %>%
 
 #### Safegraph SDM data ----
 drive_auth(email = "kokbent@ufl.edu", use_oob = T)
-drive_download("sdm-consolidated-2020-08-31-reduced.csv", "data/sdm-consolidated.csv",
+drive_download("sdm-consolidated-2020-09-29.csv", "data/sdm-consolidated.csv",
                overwrite = T)
 
 #### Data Wrangling ----
