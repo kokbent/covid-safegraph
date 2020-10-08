@@ -25,7 +25,7 @@ cbg1 <- cbg %>%
 
 #### Safegraph SDM data ----
 drive_auth(email = "kokbent@ufl.edu", use_oob = T)
-drive_download("sdm-consolidated-2020-09-29.csv", "data/sdm-consolidated.csv",
+drive_download("sdm-consolidated-2020-10-02.csv", "data/sdm-consolidated.csv",
                overwrite = T)
 
 #### Data Wrangling ----
@@ -35,7 +35,8 @@ dat <- dat %>%
 dat$origin_census_block_group <- as.character(dat$origin_census_block_group)
 dat$date <- as.Date(dat$date)
 dat <- dat %>%
-  left_join(cbg1, by = c("origin_census_block_group" = "GEOID10"))
+  left_join(cbg1, by = c("origin_census_block_group" = "GEOID10")) %>%
+  as.data.table()
 
 #### Distance travelled analysis ----
 dist_trav <- cbind(dat[,.(date, origin_census_block_group, MED_AGE, TOTALPOP)], dat[,`16001-50000`:`8001-16000`])
