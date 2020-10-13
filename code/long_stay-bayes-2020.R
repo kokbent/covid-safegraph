@@ -12,6 +12,15 @@ library(googledrive)
 library(nimble)
 source("code/get_agegrp.R")
 
+args <- commandArgs(trailingOnly = T)
+ht <- case_when(
+  args == 1 ~ "0 - 25",
+  args == 2 ~ "26 - 50",
+  args == 3 ~ "51 - 75",
+  args == 4 ~ "76 - 100",
+)
+if (args == 4) ht <- c(ht, ">100")
+
 #### CBG Data ----
 cbg <- st_read("shp/cenacs_2018.shp")
 cbg1 <- get_agegrp1(cbg) %>%
@@ -39,7 +48,7 @@ df <- df %>%
          n = sum(freq))
 
 df1 <- df %>%
-  filter(home_time %in% c("76-100", ">100")) %>%
+  filter(home_time %in% ht) %>%
   group_by(date, origin_census_block_group) %>%
   summarise(long_stay = sum(freq),
             n = mean(n)) %>%
@@ -65,7 +74,7 @@ df2 <- df1 %>%
 # r <- as.matrix(df2 %>% filter(week == min(week)) %>%
 #                  .[,c("00 - 17", "18 - 39", "40 - 64", "65 and above")])
 r <- as.matrix(df2 %>% filter(week == min(week)) %>%
-                 .[,c("18 - 29", "30 - 49", "50 - 64", "65 and above")])
+                 .[,c("00 - 17", "18 - 29", "30 - 49", "50 - 64", "65 and above")])
 df3 <- df2 %>%
   select(week, origin_census_block_group, long_stay, n)
 y <- df3 %>%
@@ -87,7 +96,8 @@ n <- n[-10424,]
 
 #### Fit with NIMBLE ----
 constants <- list(Nb = nrow(y),
-                  Nt = ncol(y))
+                  Nt = ncol(y),
+                  Ng = 5)
 
 data <- list(y = y,
              n = n,
@@ -104,22 +114,23 @@ mcmc <- buildMCMC(conf)
 modelc <- compileNimble(model)
 mcmcc <- compileNimble(mcmc)
 # Uncomment for quick sanity check
-samp <- runMCMC(mcmcc, niter = 10000, nburnin = 5000, thin = 1, nchains = 3,
+samp <- runMCMC(mcmcc, niter = 5000, nburnin = 2500, thin = 1, nchains = 3,
                 progressBar = T, samples = T, samplesAsCodaMCMC = T)
 # samp <- runMCMC(mcmcc, niter = 100000, nburnin = 50000, thin = 10, nchains = 1,
 #                 setSeed = 4342024, progressBar = T,
 #                 samples = T, samplesAsCodaMCMC = T)
+save(samp, paste0("output/mob-age-v2-ht", args, ".rda"))
 
-summ <- MCMCvis::MCMCsummary(samp)
-summ
-
-out <- data.frame(week = rep(2:39, 4), theta = summ$mean, 
-                  age_grp = rep(c("00 - 17", "18 - 39", "40 - 64", "65 and above"), each = 38))
-out$week_date <- ymd("2020-01-01")
-week(out$week_date) <- out$week
-wday(out$week_date) <- 6
-
-ggplot(out) +
-  geom_line(aes(x=week_date, y=theta, colour=age_grp), lwd = 1.1) +
-  labs(x="Week", y="", title="Fraction at home >= 75% of time") +
-  scale_x_date(date_breaks = "1 month", date_labels = "%b")
+# summ <- MCMCvis::MCMCsummary(samp)
+# summ
+# 
+# out <- data.frame(week = rep(2:39, 4), theta = summ$mean, 
+#                   age_grp = rep(c("00 - 17", "18 - 39", "40 - 64", "65 and above"), each = 38))
+# out$week_date <- ymd("2020-01-01")
+# week(out$week_date) <- out$week
+# wday(out$week_date) <- 6
+# 
+# ggplot(out) +
+#   geom_line(aes(x=week_date, y=theta, colour=age_grp), lwd = 1.1) +
+#   labs(x="Week", y="", title="Fraction at home >= 75% of time") +
+#   scale_x_date(date_breaks = "1 month", date_labels = "%b")

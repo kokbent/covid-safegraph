@@ -1,7 +1,7 @@
 code <- nimbleCode({
   for (t in 1:Nt) {
     
-    for (j in 1:4) {
+    for (j in 1:Ng) {
       theta[t, j] <- 1/(1+exp(-mu[t, j]))
     }
     
@@ -10,12 +10,12 @@ code <- nimbleCode({
     }
   }
   
-  for (j in 1:4) {
+  for (j in 1:Ng) {
     mu[1, j] ~ dnorm(0, tau_ini)
   }
   
   for (t in 2:Nt) {
-    for (j in 1:4) {
+    for (j in 1:Ng) {
       mu[t, j] ~ dnorm(mu[t-1, j], tau_rw)
     }
   }

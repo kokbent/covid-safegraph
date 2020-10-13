@@ -57,7 +57,7 @@ get_agegrp <- function (cbg) {
   return(cbg_agegrp)
 }
 
-#### No kids
+#### 5 grps
 get_agegrp1 <- function (cbg) {
   tmp <- cbg %>%
     select(GEOID10, starts_with("AGE_")) %>%
@@ -82,7 +82,6 @@ get_agegrp1 <- function (cbg) {
       age_hi <= 64 ~ "50 - 64",
       TRUE         ~ "65 and above"
     )) %>%
-    filter(age_grp != "00 - 17") %>%
     group_by(GEOID10, age_grp) %>%
     summarise(n = sum(freq)) %>%
     group_by(GEOID10) %>%
