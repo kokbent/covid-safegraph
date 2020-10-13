@@ -113,7 +113,7 @@ samp <- runMCMC(mcmcc, niter = 5000, nburnin = 2500, thin = 1, nchains = 3,
 # samp <- runMCMC(mcmcc, niter = 100000, nburnin = 50000, thin = 10, nchains = 1,
 #                 setSeed = 4342024, progressBar = T,
 #                 samples = T, samplesAsCodaMCMC = T)
-save(samp, paste0("output/mob-age-v2-dt", args, ".rda"))
+save(samp, file = paste0("output/mob-age-v2-dt", args, ".rda"))
 
 # summ <- MCMCvis::MCMCsummary(samp)
 # summ
