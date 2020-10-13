@@ -14,10 +14,10 @@ source("code/get_agegrp.R")
 
 args <- commandArgs(trailingOnly = T)
 ht <- case_when(
-  args == 1 ~ "0 - 25",
-  args == 2 ~ "26 - 50",
-  args == 3 ~ "51 - 75",
-  args == 4 ~ "76 - 100",
+  args == 1 ~ "0-25",
+  args == 2 ~ "26-50",
+  args == 3 ~ "51-75",
+  args == 4 ~ "76-100",
 )
 if (args == 4) ht <- c(ht, ">100")
 
@@ -102,7 +102,7 @@ constants <- list(Nb = nrow(y),
 data <- list(y = y,
              n = n,
              r = r)
-inits <- list(mu = matrix(0.5, nrow = constants$Nt, ncol = 4))
+inits <- list(mu = matrix(0.5, nrow = constants$Nt, ncol = 5))
 
 source("code/mob_age_JAGS.R")
 system.time(model <- nimbleModel(code, constants = constants, data = data, inits = inits,
@@ -119,7 +119,7 @@ samp <- runMCMC(mcmcc, niter = 5000, nburnin = 2500, thin = 1, nchains = 3,
 # samp <- runMCMC(mcmcc, niter = 100000, nburnin = 50000, thin = 10, nchains = 1,
 #                 setSeed = 4342024, progressBar = T,
 #                 samples = T, samplesAsCodaMCMC = T)
-save(samp, paste0("output/mob-age-v2-ht", args, ".rda"))
+save(samp, file = paste0("output/mob-age-v2-ht", args, ".rda"))
 
 # summ <- MCMCvis::MCMCsummary(samp)
 # summ

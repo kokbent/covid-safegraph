@@ -6,12 +6,12 @@ code <- nimbleCode({
     }
     
     for (i in 1:Nb) {
-      y[i,t] ~ dbin(sum(r[i,1:4] * theta[t,1:4]), n[i,t])
+      y[i,t] ~ dbin(sum(r[i,1:Ng] * theta[t,1:Ng]), n[i,t])
     }
   }
   
   for (j in 1:Ng) {
-    mu[1, j] ~ dnorm(0, tau_ini)
+    mu[1, j] ~ dnorm(0, 0.01)
   }
   
   for (t in 2:Nt) {
@@ -20,9 +20,6 @@ code <- nimbleCode({
     }
   }
   
-  sig_ini ~ T(dnorm(0, 10), 0, )
-  tau_ini <- 1/(sig_ini * sig_ini)
-  
-  sig_rw ~ T(dnorm(0, 10), 0, )
+  sig_rw ~ T(dnorm(0, 1), 0, )
   tau_rw <- 1/(sig_rw * sig_rw)
 })
