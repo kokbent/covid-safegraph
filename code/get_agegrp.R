@@ -94,6 +94,6 @@ get_agegrp1 <- function (cbg) {
 cat_dist_trav <- function (d) {
   if (d == 1) return(c("0", "1-1000", "1001-2000"))
   if (d == 2) return("2001-8000")
-  if (d == 3) return(c("8001-16000", "16001-50000")
+  if (d == 3) return(c("8001-16000", "16001-50000"))
   if (d == 4) return(">50000")
 }
