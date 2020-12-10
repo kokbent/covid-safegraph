@@ -25,7 +25,7 @@ cbg1 <- cbg %>%
 
 #### Safegraph SDM data ----
 drive_auth(email = "kokbent@ufl.edu", use_oob = T)
-drive_download("sdm-consolidated-2020-09-29.csv", "data/sdm-consolidated.csv",
+drive_download("sdm-consolidated-2020-11-14.csv", "data/sdm-consolidated.csv",
                overwrite = T)
 
 #### Data Wrangling ----
@@ -88,15 +88,26 @@ for (i in 1:length(counties)) {
   comb_df <- bind_rows(comb_df, df)
 }
 
+comb_df1 <- comb_df %>%
+  mutate(week = epiweek(date)) %>%
+  group_by(week, county) %>%
+  summarise(prop_non_home = mean(prop_non_home))
+
 ggplot(comb_df) +
   geom_line(aes(date, prop_non_home, colour = county)) +
   theme_bw() +
   scale_x_date(date_breaks = "1 month", date_labels = "%b")
 
-ggplot(comb_df) +
+ggplot(comb_df %>%
+         filter(county %in% c("Alachua", "Dade", "Broward", "Florida", "Duval"))) +
   geom_line(aes(date, prop_non_home_ma7, colour = county)) +
   theme_bw() +
   scale_x_date(date_breaks = "1 month", date_labels = "%b")
+
+ggplot(comb_df1) +
+  geom_line(aes(week, prop_non_home, colour = county)) +
+  theme_bw()
+
 
 #### Proportion baseline
 comb_df1 <- comb_df %>%

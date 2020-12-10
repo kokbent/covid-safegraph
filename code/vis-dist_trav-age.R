@@ -27,6 +27,6 @@ ggplot(df) +
   labs(x="Week", y="", title="Fraction of persons traveled X km from home") +
   scale_x_date(date_breaks = "1 month", date_labels = "%b") +
   scale_colour_viridis_d(name = "Age group", option = "C", end = 0.9, direction = -1) +
-  facet_wrap(~ dt) +
+  facet_wrap(~ dt, nrow = 4) +
   ggpubr::theme_pubclean()
 

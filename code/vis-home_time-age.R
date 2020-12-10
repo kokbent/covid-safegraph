@@ -19,10 +19,12 @@ for (i in 1:4) {
   df <- bind_rows(df, out)
 }
 
+df$ht <- factor(df$ht, levels = ht)
+
 ggplot(df) +
   geom_line(aes(x=week_date, y=theta, colour=age_grp), lwd = 1.1) +
   labs(x="Week", y="", title="Fraction of persons staying at home for X% of time") +
   scale_x_date(date_breaks = "1 month", date_labels = "%b") +
   scale_colour_viridis_d(name = "Age group", option = "C", end = 0.9, direction = -1) +
-  facet_wrap(~ ht) +
+  facet_wrap(~ ht, nrow = 4) +
   ggpubr::theme_pubclean()
