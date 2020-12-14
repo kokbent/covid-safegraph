@@ -43,7 +43,6 @@ cbg_topcat %<>%
   complete(cbg = cbg, top_category = unique(cbg_topcat$top_category),
            number_devices_residing = number_devices_residing,
            TOTALPOP = TOTALPOP, fill = list(freq = 0))
-
 cbg_topcat %<>%
   filter(TOTALPOP != 0)
 
@@ -109,7 +108,7 @@ load %>%
   colorspace::scale_fill_continuous_diverging(mid=0) +
   theme(axis.text.x = element_text(angle = 90))
 
-readr::write_rds(zip_tcwide, "data/zip_tcwide.rds")
+readr::write_rds(zip_tcwide, "data/zip_tcwide_2020-07.rds")
 
 #### CBG shape
 cbg <- st_read("../fl-covid19/tmp/cenacs/cenacs_2018.shp") %>%
@@ -121,6 +120,7 @@ tract_dem <- cbg %>%
   mutate(tract = str_sub(GEOID10, 1, 11)) %>%
   group_by(tract) %>%
   summarise(MED_AGE = sum(MED_AGE * TOTALPOP)/sum(TOTALPOP),
+            MEDHHINC = sum(MEDHHINC * TOTALPOP)/sum(TOTALPOP),
             TOTALPOP = sum(TOTALPOP),
             ACRES = sum(ACRES))
 
@@ -129,17 +129,18 @@ zip_dem <- tract_dem %>%
             by = c("tract" = "TRACT")) %>%
   group_by(ZIP) %>%
   summarise(MED_AGE = sum(MED_AGE * TOTALPOP)/sum(TOTALPOP),
+            MEDHHINC = sum(MEDHHINC * TOTALPOP)/sum(TOTALPOP),
             TOTALPOP = sum(TOTALPOP),
             ACRES = sum(ACRES))
 
-zip_covid1 <- fread("../fl-covid19-extra-analysis/data/zipcase_20200801.csv")
-zip_covid2 <- fread("../fl-covid19-extra-analysis/data/zipcase_20200701.csv")
+zip_covid1 <- fread("../fl-covid19-extra-analysis/data/zipcase_20200719.csv")
+zip_covid2 <- fread("../fl-covid19-extra-analysis/data/zipcase_20200619.csv")
 
 zip_covid1 %<>%
   filter(!Cases_1 %in% c("0", "<5")) %>%
   select(ZIP, COUNTYNAME, Case = Cases_1)
 zip_covid2 %<>%
-  filter(!Cases_1 %in% c("0", "<5")) %>%
+  filter(!Cases_1 %in% c("0", "<5", "SUPPRESSED")) %>%
   select(ZIP, COUNTYNAME, Case = Cases_1)
 zip_jul <- zip_covid1 %>%
   inner_join(zip_covid2, by = c("ZIP", "COUNTYNAME")) %>%

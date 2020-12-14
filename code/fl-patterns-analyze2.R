@@ -16,7 +16,7 @@ drive_auth(
   use_oob = T
 )
 # drive_find(n = 30)
-months <- paste0("2020-0", 7)
+months <- paste0("2020-0", 6)
 for (m in months) {
   infile <- paste0("safegraph-patterns/output/patterns-", m, ".csv")
   outfile <- paste0("data/patterns-", m, ".csv")
@@ -31,13 +31,9 @@ for (m in months) {
   drive_download(infile, outfile, overwrite = T)
 }
 
-patterns <- fread("data/patterns-2020-07.csv")
-patterns
-
-core <- fread("data/core-2020-07.csv")
-core
-
-hp <- fread("data/hp-2020-07.csv", 
+patterns <- fread("data/patterns-2020-06.csv")
+core <- fread("data/core-2020-06.csv")
+hp <- fread("data/hp-2020-06.csv", 
             colClasses = c(census_block_group="character"))
 
 #### Functions
@@ -84,9 +80,9 @@ home_cbg_freq <- home_cbg_freq %>%
 home_cbg_freq <- home_cbg_freq %>%
   left_join(core %>% select(safegraph_place_id, top_category, sub_category))
 home_cbg_freq <- home_cbg_freq %>% filter(!is.na(top_category))
-fwrite(home_cbg_freq, "data/home_cbg_freq.csv")
+fwrite(home_cbg_freq, "data/home_cbg_freq_2020-06.csv")
 
-table(home_cbg_freq$top_category)○
+table(home_cbg_freq$top_category)
 
 home_cbg_freq %>%
   filter(top_category == "Restaurants and Other Eating Places") %>%
